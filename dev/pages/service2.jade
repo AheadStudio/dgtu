@@ -1,0 +1,304 @@
+extends ../templates/base
+
+block content
+    div(class="page-inner")
+        div(class="page-breadcrumbs")
+            a(href="/home.html", class="link link-black-bottom page-breadcrumbs-item")
+                | Главная
+            span(class="page-breadcrumbs-item-badge")<
+            a(href="/service1.html", class="link link-black-inverse page-breadcrumbs-item")
+                | Довузовская подготовка
+            span(class="page-breadcrumbs-item-badge")<
+            a(href="#", class="link link-black-bottom page-breadcrumbs-item")
+                | Академия абитуриентов
+        h1(class="page-heading")
+            | Довузовская подготовка
+        div(class="page-text")
+            p Потенциал Леннард-Джонса — простая модель парного взаимодействия неполярных молекул, описывающая зависимость энергии взаимодействия двух частиц от расстояния между ними.Потенциал Леннард-Джонса — простая модель парного взаимодействия неполярных молекул, описывающая зависимость энергии взаимодействия двух частиц от расстояния между ними.Потенциал Леннард-Джонса — простая модель парного взаимодействия неполярных молекул, описывающая зависимость энергии взаимодействия двух частиц от расстояния между ними.Потенциал Леннард-Джонса — простая модель парного взаимодействия неполярных молекул, описывающая зависимость энергии взаимодействия двух частиц от расстояния между ними.Потенциал Леннард-Джонса — простая модель парного взаимодействия неполярных молекул, описывающая зависимость энергии взаимодействия двух частиц от расстояния между ними.
+    div(class="tabs")
+        div(class="tabs-heading")
+            div(class="page-inner")
+                a(href="#academy-entrants", class="link link-black tabs-heading-item active-tabs") Академия абитуриентов
+                a(href="#parent-university", class="link link-black tabs-heading-item") Родительский университет
+                a(href="#children-university", class="link link-black tabs-heading-item") Детский университет
+        div(class="tabs-content")
+            div(class="tabs-content-item active-tabs",id="academy-entrants")
+                div(class="page-inner")
+                    +menu({
+                        rootClass: "page-menu",
+                        items: [
+                            {
+                                name: "Подготовительные курсы",
+                                href: "partnership.html",
+                                linkClass: "link link-black link-red-bottom",
+                                current: (page.code == "partnership" ? true : false)
+                            }, {
+                                name: "Подготовка к егэ в дни школьных каникул",
+                                href: "delivery.html",
+                                linkClass: "link link-black link-red-bottom",
+                                current: (page.code == "delivery" ? true : false)
+                            }, {
+                                name: "&laquo;Радуга возможностей&raquo;",
+                                href: "#",
+                                items: [
+                                    {
+                                        name: "Курс 1",
+                                        href: "about.html",
+                                        linkClass: "link link-black link-black-bottom",
+                                    }, {
+                                        name: "Курс 2",
+                                        href: "contacts.html",
+                                        linkClass: "link link-black link-black-bottom",
+                                    }, {
+                                        name: "Курс 3",
+                                        href: "contacts.html",
+                                        linkClass: "link link-black link-black-bottom",
+                                    }, 
+                                ],
+                                linkClass: "link link-black link-red-bottom active",
+                                current: (page.code == "download" ? true : false)
+                            }, {
+                                name: "Малые факультеты",
+                                href: "download.html",
+                                linkClass: "link link-black link-red-bottom",
+                                current: (page.code == "download" ? true : false)
+                            }, {
+                                name: "Естественно-научная школа &laquo;максиум&raquo;",
+                                href: "download.html",
+                                linkClass: "link link-black link-red-bottom",
+                                current: (page.code == "download" ? true : false)
+                            }, {
+                                name: "&laquo;Студия-арт&raquo;",
+                                href: "download.html",
+                                linkClass: "link link-black link-red-bottom",
+                                current: (page.code == "download" ? true : false)
+                            }, {
+                                name: "&laquo;Независимое тестирование&raquo;",
+                                href: "download.html",
+                                linkClass: "link link-black link-red-bottom",
+                                current: (page.code == "download" ? true : false)
+                            }
+                        ]
+                    })
+                    div(class="page-text")
+                        h2 Радуга возможностей
+                        p В рамках профориентационной работы со школьниками 8-10 классов, а также с целью развития у учащихся старших классов интереса к современной науке и представления о специфике научной работы в университете  проводится  профильная смена &laquo;Радуга возможностей&raquo;.
+                        p Профильная смена организована по принципу лагеря дневного пребывания. Школьники будут находиться на территории кампуса университета с 9.00 до 17.00 (исключая время посещения мероприятий на городских площадках). В течение всего учебного дня предусмотрено сопровождение группы куратором. Питание школьников будет организовано  в студенческой столовой университета.
+                        a(href="#", class="price-education") 
+                            span(class="icon-price-inner icon-not-transition")
+                            span(class="link link-red link-red-bottom") Стоимость обучения
+                        h2 В стоимость входит
+                        ul
+                            li обучение по программе &laquo;Подготовка к ЕГЭ и ОГЭ: математика, физика, русский язык&raquo; (занятия проводят преподаватели  университета - эксперты в области ЕГЭ);
+                            li практические занятия в научных центрах и лабораториях университета, оснащенных современным оборудованием;
+                            li профориентационное тестирование с консультацией психолога;
+                            li выездные экскурсии;
+                            li 2-х разовое питание;
+                            li познавательно-досуговые мероприятия (посещение инновационного центра атомной энергии РО, посещение бассейна, занятия  физкультурой  на свежем воздухе) и  многое  другое  …
+                        div(class="important")
+                            h2 Что-то важное
+                            p Флуоресце́нция, или флюоресценция — физический процесс, разновидность люминесценции. Флуоресценцией обычно называют излучательный переход возбужденного состояния с самого нижнего синглетного колебательного уровня S1 в основное состояние S0. Люминесценция — нетепловое свечение вещества, происходящее после поглощения им энергии возбуждения. Впервые люминесценция была описана 18веке.
+                        div(class="slider-bottom-service")
+                            img(src="../dummy/students-write-news-detail.jpg")
+                            img(src="../dummy/students-new-detail.jpg")
+                            img(src="../dummy/students-like-news-detail.jpg")
+                            img(src="../dummy/students-write-news-detail.jpg")
+                            img(src="../dummy/students-new-detail.jpg")
+                            img(src="../dummy/students-like-news-detail.jpg")
+                            img(src="../dummy/students-write-news-detail.jpg")
+                            img(src="../dummy/students-new-detail.jpg")
+                            img(src="../dummy/students-like-news-detail.jpg")
+                            
+            div(class="tabs-content-item",id="parent-university")
+                div(class="page-inner")
+                    +menu({
+                        rootClass: "page-menu",
+                        items: [
+                            {
+                                name: "Подготовительные курсы",
+                                href: "partnership.html",
+                                linkClass: "link link-black link-red-bottom",
+                                current: (page.code == "partnership" ? true : false)
+                            }, {
+                                name: "Подготовка к егэ в дни школьных каникул",
+                                href: "delivery.html",
+                                linkClass: "link link-black link-red-bottom",
+                                current: (page.code == "delivery" ? true : false)
+                            }, {
+                                name: "&laquo;Радуга возможностей&raquo;",
+                                href: "#",
+                                items: [
+                                    {
+                                        name: "Курс 1",
+                                        href: "about.html",
+                                        linkClass: "link link-black link-black-bottom",
+                                    }, {
+                                        name: "Курс 2",
+                                        href: "contacts.html",
+                                        linkClass: "link link-black link-black-bottom",
+                                    }, {
+                                        name: "Курс 3",
+                                        href: "contacts.html",
+                                        linkClass: "link link-black link-black-bottom",
+                                    }, 
+                                ],
+                                linkClass: "link link-black link-red-bottom active",
+                                current: (page.code == "download" ? true : false)
+                            }, {
+                                name: "Малые факультеты",
+                                href: "download.html",
+                                linkClass: "link link-black link-red-bottom",
+                                current: (page.code == "download" ? true : false)
+                            }, {
+                                name: "Естественно-научная школа &laquo;максиум&raquo;",
+                                href: "download.html",
+                                linkClass: "link link-black link-red-bottom",
+                                current: (page.code == "download" ? true : false)
+                            }, {
+                                name: "&laquo;Студия-арт&raquo;",
+                                href: "download.html",
+                                linkClass: "link link-black link-red-bottom",
+                                current: (page.code == "download" ? true : false)
+                            }, {
+                                name: "&laquo;Независимое тестирование&raquo;",
+                                href: "download.html",
+                                linkClass: "link link-black link-red-bottom",
+                                current: (page.code == "download" ? true : false)
+                            }
+                        ]
+                    })
+                    div(class="page-text")
+                        h2 Родительский университет
+                        p Соотноше́ния Кра́мерса — Кро́нига — интегральная связь между действительной и мнимой частями любой комплексной функции, аналитичной в верхней полуплоскости. Часто используются в физике для описания связи действительной и мнимой частей функции отклика физической системы, поскольку аналитичность функции отклика подразумевает, что система удовлетворяет принципу причинности, и наоборот [1]. В частности, соотношения Крамерса — Кронига выражают связь между действительной и мнимой частями диэлектрической проницаемости в классической электродинамике и амплитуды вероятности перехода (матричного элемента) между двумя состояниями в квантовой теории поля.
+                        p
+                            img(src="../dummy/big-students.jpg", alt="Студенты пишут")
+                        h2 Требования к слушателям
+                        ol
+                            li Каждый слушатель должен ознакомиться с правиллами внутреннего распорядка университета и выполнять их.
+                            li В ДГТУ действует пропускной режим слушатель подготовительных курсов при входе в университет обязан предъявить пропуск.
+                            li Курение в университете запрещено
+                            li В университете действет положение о Корпоративной этике(нельязя использовать ненормативную лексику, шуметь в аудиториях и коридорах)
+                            li Все слушатели обязаны относиться к оборудованию  в аудиториях университета, соблюдать частоту
+                        div(class="info") За недостойное поведение и нарушение Правил внутреннего распорядка университета, пропускного режима, правил пожарной безопасности и учебной дисциплины слушатель отчисляется без возврата оплаты за обучение.
+                        h2 Регистрация
+                        form(class="form")
+                            div(class="form-row")
+                                div(class="form-item-holder form-item-holder--w2")
+                                    input(type="text", class="form-item form-item--text", name="lastname", placeholder="Фамилия", required)
+                                div(class="form-item-holder form-item-holder--w2")
+                                    input(type="text", class="form-item form-item--text", name="name", placeholder="Имя", required)
+                            div(class="form-row")
+                                div(class="form-item-holder form-item-holder--w3")
+                                    input(type="text", class="form-item form-item--text", name="class", placeholder="Класс в котором вы обучаетесь")
+                                div(class="form-item-holder form-item-holder--w3")
+                                    input(type="text", class="form-item form-item--text", name="mobile", placeholder="Телефон", required)
+                                div(class="form-item-holder form-item-holder--w3")
+                                    input(type="email", class="form-item form-item--text", name="email", placeholder="E-mail, required")
+                            div(class="form-row")
+                                div(class="form-item-holder form-item-holder--w1")
+                                    textarea(rows="2", name="text", class="form-item form-item--textarea", placeholder="Ваш вопрос")
+                            div(class="form-row")
+                                button(type="submit", name="send-form" class="form-item form-item--submit")Отправить
+            div(class="tabs-content-item",id="children-university")
+                div(class="page-inner")
+                    +menu({
+                        rootClass: "page-menu",
+                        items: [
+                            {
+                                name: "Подготовительные курсы",
+                                href: "partnership.html",
+                                linkClass: "link link-black link-red-bottom",
+                                current: (page.code == "partnership" ? true : false)
+                            }, {
+                                name: "Подготовка к егэ в дни школьных каникул",
+                                href: "delivery.html",
+                                linkClass: "link link-black link-red-bottom",
+                                current: (page.code == "delivery" ? true : false)
+                            }, {
+                                name: "&laquo;Радуга возможностей&raquo;",
+                                href: "#",
+                                items: [
+                                    {
+                                        name: "Курс 1",
+                                        href: "about.html",
+                                        linkClass: "link link-black link-black-bottom",
+                                    }, {
+                                        name: "Курс 2",
+                                        href: "contacts.html",
+                                        linkClass: "link link-black link-black-bottom",
+                                    }, {
+                                        name: "Курс 3",
+                                        href: "contacts.html",
+                                        linkClass: "link link-black link-black-bottom",
+                                    }, 
+                                ],
+                                linkClass: "link link-black link-red-bottom active",
+                                current: (page.code == "download" ? true : false)
+                            }, {
+                                name: "Малые факультеты",
+                                href: "download.html",
+                                linkClass: "link link-black link-red-bottom",
+                                current: (page.code == "download" ? true : false)
+                            }, {
+                                name: "Естественно-научная школа &laquo;максиум&raquo;",
+                                href: "download.html",
+                                linkClass: "link link-black link-red-bottom",
+                                current: (page.code == "download" ? true : false)
+                            }, {
+                                name: "&laquo;Студия-арт&raquo;",
+                                href: "download.html",
+                                linkClass: "link link-black link-red-bottom",
+                                current: (page.code == "download" ? true : false)
+                            }, {
+                                name: "&laquo;Независимое тестирование&raquo;",
+                                href: "download.html",
+                                linkClass: "link link-black link-red-bottom",
+                                current: (page.code == "download" ? true : false)
+                            }
+                        ]
+                    })
+                    div(class="page-text")
+                        h2 Школьный университет
+                        p Соотноше́ния Кра́мерса — Кро́нига — интегральная связь между действительной и мнимой частями любой комплексной функции, аналитичной в верхней полуплоскости. Часто используются в физике для описания связи действительной и мнимой частей функции отклика физической системы, поскольку аналитичность функции отклика подразумевает, что система удовлетворяет принципу причинности, и наоборот [1]. В частности, соотношения Крамерса — Кронига выражают связь между действительной и мнимой частями диэлектрической проницаемости в классической электродинамике и амплитуды вероятности перехода (матричного элемента) между двумя состояниями в квантовой теории поля.
+                        p
+                            img(src="../dummy/big-students.jpg", alt="Студенты пишут")
+                        h2 Требования к слушателям
+                        ol
+                            li Каждый слушатель должен ознакомиться с правиллами внутреннего распорядка университета и выполнять их.
+                            li В ДГТУ действует пропускной режим слушатель подготовительных курсов при входе в университет обязан предъявить пропуск.
+                            li Курение в университете запрещено
+                            li В университете действет положение о Корпоративной этике(нельязя использовать ненормативную лексику, шуметь в аудиториях и коридорах)
+                            li Все слушатели обязаны относиться к оборудованию  в аудиториях университета, соблюдать частоту
+                        div(class="info") За недостойное поведение и нарушение Правил внутреннего распорядка университета, пропускного режима, правил пожарной безопасности и учебной дисциплины слушатель отчисляется без возврата оплаты за обучение.
+                        h2 Регистрация
+                        form(class="form")
+                            div(class="form-row")
+                                div(class="form-item-holder form-item-holder--w2")
+                                    input(type="text", class="form-item form-item--text", name="lastname", placeholder="Фамилия", required)
+                                div(class="form-item-holder form-item-holder--w2")
+                                    input(type="text", class="form-item form-item--text", name="name", placeholder="Имя", required)
+                            div(class="form-row")
+                                div(class="form-item-holder form-item-holder--w3")
+                                    input(type="text", class="form-item form-item--text", name="class", placeholder="Класс в котором вы обучаетесь")
+                                div(class="form-item-holder form-item-holder--w3")
+                                    input(type="text", class="form-item form-item--text", name="mobile", placeholder="Телефон", required)
+                                div(class="form-item-holder form-item-holder--w3")
+                                    input(type="email", class="form-item form-item--text", name="email", placeholder="E-mail, required")
+                            div(class="form-row")
+                                div(class="form-item-holder form-item-holder--w1")
+                                    textarea(rows="2", name="text", class="form-item form-item--textarea", placeholder="Ваш вопрос")
+                            div(class="form-row")
+                                button(type="submit", name="send-form" class="form-item form-item--submit")Отправить
+    div(class="location-information")
+        div(class="page-inner")
+            div(class="location-information-address")
+                span(class="location-information--street") Наш адрес: г. Ростов-на-Дону, пл. Гагарина 1, корп. 8, к. 127 
+                span(class="location-information--transport") Проезд: автобус 22, 45, 46, 49, 65, 77, 78, 83, 90, 99. ост. &laquo;Общежитие РИСИ&raquo; или &laquo;ЦГБ&raquo;
+                span(class="location-information--invitation") Приглашаем посетить страницу подготовительных курсов ВКОНТАКТЕ: 
+                    a(href="https://vk.com/", class="link link-white link-white-inverse")ВК подготовительные курсы ДГТУ
+            div(class="location-information-contacts")
+                span(class="location-information--mobile") Телефон: 
+                    a(href="tel:+78632738542", class="link link-white") (863) 273-85-42,
+                    a(href="tel:+78632381534", class="link link-white") 238-15-34
+                span(class="location-information--email") Email: 
+                    a(href="mailto:odp@donstu.ru", class="link link-white") odp@donstu.ru

@@ -1,0 +1,97 @@
+extends ../templates/base
+
+block content
+    div(class="page-inner")
+        div(class="page-breadcrumbs")
+            a(href="/home.html", class="link link-black-bottom page-breadcrumbs-item")
+                | Главная
+            span(class="page-breadcrumbs-item-badge")<
+            a(href="/education.html", class="link link-black-inverse page-breadcrumbs-item")
+                | Результаты поиска
+        h1(class="page-heading")
+            | Рузультаты поиска
+        div(class="search-container")
+            form(action="/search.html")
+                input(type="text", class="header-search-item")
+                button(type="submit", title="Найти", class="header-search-submit")
+                    span(class="icon-search-loupe-inner")
+    div(class="sort-events-holder")
+        div(class="page-inner")
+            div(class="sort-events--type")
+                label(class="filter-events")
+                    input(type="checkbox", class="form-item--checkbox") 
+                    span(class="form-item-label--text") показать все
+                label(class="filter-events")
+                    input(type="checkbox", class="form-item--checkbox")
+                    span(class="form-item-label--text") Напраления подготовки
+                label(class="filter-events")
+                    input(type="checkbox", class="form-item--checkbox")
+                    span(class="form-item-label--text") Новости
+                label(class="filter-events")
+                    input(type="checkbox", class="form-item--checkbox")
+                    span(class="form-item-label--text") Олимпиады и конкурсы
+                label(class="filter-events")
+                    input(type="checkbox", class="form-item--checkbox")
+                    span(class="form-item-label--text") Приемная компания
+            div(class="sort-events--type")
+                label(class="filter-events")
+                    input(type="checkbox", class="form-item--checkbox") 
+                    span(class="form-item-label--text") Календарь
+                label(class="filter-events")
+                    input(type="checkbox", class="form-item--checkbox")
+                    span(class="form-item-label--text") Документы
+                label(class="filter-events filter-events--more", data-slide-more="tags")
+                    input(type="checkbox", class="form-item--checkbox")
+                    span(class="form-item-label--text") Открыть теги
+    div(class="sort-events-holder sort-events--more sort-events--tags", id="tags")
+        div(class="sort-events-container")
+            div(class="tags-inner tags-inner--sort")
+                a(href="#", class="tag-item active") #объявление
+                a(href="#", class="tag-item") #олимпиада
+                a(href="#", class="tag-item") #конкурсы
+                a(href="#", class="tag-item") #родителям
+                a(href="#", class="tag-item") #какой-то тег
+                a(href="#", class="tag-item") #конкурсы
+                a(href="#", class="tag-item") #родители
+                a(href="#", class="tag-item") #тег
+    div(class="page-inner")
+        div(class="events events--set")
+            div(class="events-items", id="events-items-list")
+                div(class="events-item")
+                    a(href="#", class="events-item-inner")
+                        div(class="events-item-photo-holder")
+                            img(src="../dummy/olympiads-mathematics.jpg", class="events-item-photo")
+                    div(class="events-item-inner-info events-item-inner-info--news")
+                        div(class="events-item-inner-type")
+                            span Новости
+                            a(href="#", class="tag") #объявление
+                        a(href="#", class="link link-black-bottom events-item-inner-title") Заголовок объявления пишу очень длинный
+                        div(class="events-item-inner-text") Потенциальная яма – ограниченная область пространства с пониженной потенциальной энергией частицы. Потенциальная яма обычно отвечает короткодействующим силам притяжения. В области действия этих сил потенциал отрицателен, вне – нулевой.Потенциальная яма – ограниченная область пространства с пониженной потенциальной энергией частицы. Потенциальная яма обычно отвечает короткодействующим силам притяжения. В области действия этих сил потенциал отрицателен, вне – нулевой.                
+                div(class="events-item")
+                    div(class="events-item-inner-info events-item-inner-info--page")
+                        div(class="events-item-inner-type")
+                            span Название страницы
+                            a(href="#", class="tag") #объявление
+                            a(href="#", class="tag") #тегистый тег
+                        div(class="events-item-inner-text") Потенциальная яма – ограниченная область пространства с пониженной потенциальной энергией частицы. Потенциальная яма обычно отвечает короткодействующим силам притяжения. В области действия этих сил потенциал отрицателен, вне – нулевой.Потенциальная яма – ограниченная область пространства с пониженной потенциальной энергией частицы. Потенциальная яма обычно отвечает короткодействующим силам притяжения. В области действия этих сил потенциал отрицателен, вне – нулевой. Потенциальная яма – ограниченная область пространства с пониженной потенциальной энергией частицы. Потенциальная яма обычно отвечает короткодействующим силам притяжения. В области действия этих сил потенциал отрицателен, вне – нулевой.Потенциальная яма – ограниченная область пространства с пониженной потенциальной энергией частицы. Потенциальная яма обычно отвечает короткодействующим силам притяжения. В области действия этих сил потенциал отрицателен, вне – нулевой.                 
+                div(class="events-item")
+                    div(class="events-item-inner-info events-item-inner-info--page")
+                        div(class="events-item-inner-type")
+                            span Документы
+                            a(href="#", class="tag") #объявление
+                    div(class="documents")
+                        a(href="#", target="_blank", class="link link-bold")
+                            span(class="icon-download-file-inner icon-not-transition") 
+                            span(class="documents-name link link-black link-black-inverse") Теоритическая механика.pdf
+                div(class="events-item")
+                    a(href="#", class="events-item-inner")
+                        div(class="events-item-photo-holder")
+                            img(src="../dummy/olympiads-mathematics.jpg", class="events-item-photo")
+                    div(class="events-item-inner-info events-item-inner-info--news")
+                        div(class="events-item-inner-type")
+                            span Новости
+                            a(href="#", class="tag") #объявление
+                        a(href="#", class="link link-black-bottom events-item-inner-title") Заголовок объявления пишу очень длинный
+                        div(class="events-item-inner-text") Потенциальная яма – ограниченная область пространства с пониженной потенциальной энергией частицы. Потенциальная яма обычно отвечает короткодействующим силам притяжения. В области действия этих сил потенциал отрицателен, вне – нулевой.Потенциальная яма – ограниченная область пространства с пониженной потенциальной энергией частицы. Потенциальная яма обычно отвечает короткодействующим силам притяжения. В области действия этих сил потенциал отрицателен, вне – нулевой.                
+            div(class="button-events")
+                a(href="events-load.html", data-container="#events-items-list", class="btn btn-event-load btn-event-load--more") Показать еще

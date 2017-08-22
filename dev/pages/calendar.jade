@@ -1,0 +1,130 @@
+extends ../templates/base
+
+block content
+    div(class="page-inner")
+        div(class="page-breadcrumbs")
+            a(href="/home.html", class="link link-black-bottom page-breadcrumbs-item")
+                | Главная
+            span(class="page-breadcrumbs-item-badge")<
+            a(href="/calendar.html", class="link link-black-inverse page-breadcrumbs-item")
+                | Календарь
+
+        h1(class="page-heading") Календарь мероприятий
+    div(class="sort-events-holder")
+        div(class="page-inner")
+            div(class="sort-events--years")
+                a(class="link link-black link-black-bottom isotope-filter-button", data-filter=".years2016") 2016
+                a(class="link link-black link-black-bottom isotope-filter-button", data-filter=".years2017") 2017
+                a(href="#", class="link link-black link-black-bottom", data-filter="years2018") 2018
+                a(href="#", class="link link-black link-black-bottom", data-filter="years2019") 2019
+            div(class="sort-events--month")
+                a(class="link link-black link-black-bottom isotope-filter-button", data-filter=".monthJanuary") Январь
+                a(class="link link-black link-black-bottom isotope-filter-button", data-filter=".monthFebruary") Февраль
+                a(href="#", class="link link-black link-black-bottom") Март
+                a(href="#", class="link link-black link-black-bottom") Апрель
+                a(href="#", class="link link-black link-black-bottom") Май
+                a(href="#", class="link link-black link-black-bottom") Июнь
+                a(href="#", class="link link-black link-black-bottom") Июль
+                a(href="#", class="link link-black link-black-bottom") Август
+                a(href="#", class="link link-black link-black-bottom") Сентябрь
+                a(href="#", class="link link-black link-black-bottom") Октябрь
+                a(href="#", class="link link-black link-black-bottom") Ноябрь
+                a(href="#", class="link link-black link-black-bottom") Декабрь
+            div(class="sort-events--type")
+                label(class="filter-events")
+                    input(type="radio", name="event-item", class="form-item--radio", data-filter=".events") 
+                    span(class="form-item-label--text") Мероприятия
+                label(class="filter-events")
+                    input(type="radio", name="event-item", class="form-item--radio", data-filter=".news")
+                    span(class="form-item-label--text") Новости
+                label(class="filter-events")
+                    input(type="radio", name="event-item", class="form-item--radio")
+                    span(class="form-item-label--text") Олимпиады
+                label(class="filter-events")
+                    input(type="radio", name="event-item", class="form-item--radio")
+                    span(class="form-item-label--text") Дни открытых дверей
+                label(class="filter-events")
+                    input(type="radio", name="event-item", class="form-item--radio")
+                    span(class="form-item-label--text") Анонсы
+                label(class="filter-events")
+                    input(type="radio", name="event-item", class="form-item--radio")
+                    span(class="form-item-label--text") Объявления
+    div(class="page-inner")
+        div(class="events")
+            div(class="events-items")
+                div(class="button-events")
+                    button(type="button", class="btn btn-event-load") Показать прошедшие мероприятия
+                div(class="isotope-filter")
+                    div(class="events-item isotope-filter-item active years2016 monthJanuary")
+                        a(href="#", class="events-item-inner")
+                            div(class="events-item-photo-holder")
+                                img(src="../dummy/olympiads-mathematics.jpg", class="events-item-photo")
+                        div(class="events-item-inner-info")
+                            a(href="#", class="link link-black-bottom events-item-inner-title") Заголовок объявления пишу очень длинный
+                            div(class="events-item-inner-date")
+                                span 30.06.2017
+                                span 14:00
+                            div(class="events-item-inner-location") ул. Улица. Главный холл ДГТУ
+                            div(class="events-item-inner-text") Потенциальная яма – ограниченная область пространства с пониженной потенциальной энергией частицы. Потенциальная яма обычно отвечает короткодействующим силам притяжения. В области действия этих сил потенциал отрицателен, вне – нулевой.                
+                        a(href="#", class="tag") #объявление
+                        a(href="#", class="events-item-inner-more")
+                            span(class="item--more")
+                    div(class="events-item isotope-filter-item years2017 monthFebruary events")
+                        a(href="#", class="events-item-inner")
+                            div(class="events-item-photo-holder")
+                                img(src="../dummy/olympiads-mathematics.jpg", class="events-item-photo")
+                        div(class="events-item-inner-info")
+                            a(href="#", class="link link-black-bottom events-item-inner-title") Заголовок объявления пишу очень длинный
+                            div(class="events-item-inner-date")
+                                span 30.06.2017
+                                span 14:00
+                                span -
+                                span 31.06.2017
+                            div(class="events-item-inner-location") ул. Улица. Главный холл ДГТУ
+                        a(href="#", class="tag") #объявление
+                        a(href="#", class="events-item-inner-more")
+                            span(class="item--more")
+                    div(class="events-item isotope-filter-item years2016 monthJanuary")
+                        a(href="#", class="events-item-inner")
+                            div(class="events-item-photo-holder")
+                                img(src="../dummy/olympiads-mathematics.jpg", class="events-item-photo")
+                        div(class="events-item-inner-info")
+                            a(href="#", class="link link-black-bottom events-item-inner-title") Заголовок объявления пишу очень длинный
+                            div(class="events-item-inner-date")
+                                span 30.06.2017
+                                span 14:00
+                                span -
+                                span 31.06.2017
+                            div(class="events-item-inner-location") ул. Улица. Главный холл ДГТУ
+                        a(href="#", class="tag") #объявление
+                        a(href="#", class="events-item-inner-more")
+                            span(class="item--more")
+                    div(class="events-item isotope-filter-item not-ative")
+                        a(href="#", class="events-item-inner")
+                            div(class="events-item-photo-holder")
+                                img(src="../dummy/olympiads-mathematics.jpg", class="events-item-photo")
+                        div(class="events-item-inner-info")
+                            a(href="#", class="link link-black-bottom events-item-inner-title") Заголовок объявления пишу очень длинный
+                            div(class="events-item-inner-date")
+                                span 30.06.2017
+                                span 14:00
+                                span -
+                                span 31.06.2017
+                            div(class="events-item-inner-location") ул. Улица. Главный холл ДГТУ
+                        a(href="#", class="tag") #объявление
+                        a(href="#", class="events-item-inner-more")
+                            span(class="item--more")
+                    div(class="events-item isotope-filter-item active years2016 monthJanuary")
+                        a(href="#", class="events-item-inner")
+                            div(class="events-item-photo-holder")
+                                img(src="../dummy/olympiads-mathematics.jpg", class="events-item-photo")
+                        div(class="events-item-inner-info")
+                            a(href="#", class="link link-black-bottom events-item-inner-title") Заголовок объявления пишу очень длинный
+                            div(class="events-item-inner-date")
+                                span 30.06.2017
+                                span 14:00
+                            div(class="events-item-inner-location") ул. Улица. Главный холл ДГТУ
+                            div(class="events-item-inner-text") Потенциальная яма – ограниченная область пространства с пониженной потенциальной энергией частицы. Потенциальная яма обычно отвечает короткодействующим силам притяжения. В области действия этих сил потенциал отрицателен, вне – нулевой.                
+                        a(href="#", class="tag") #объявление
+                        a(href="#", class="events-item-inner-more")
+                            span(class="item--more")

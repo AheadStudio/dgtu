@@ -1,0 +1,123 @@
+{
+	"info": {
+		"name": "Абитуриент ДГТУ",
+		"code": "dgtu",
+		"year": "2017",
+		"notes": "Сайт для абитуриентов",
+		"productionUrl": "http://wemakesites.ru/projects/dgtu/",
+		"siteName": "dgtu",
+		"title": "Абитуриент ДГТУ",
+		"description": "",
+		"keywords": "",
+		"image": "/i/og.jpg"
+	},
+	"customer": {
+        "name": "Александр",
+        "company": "GoodCode",
+        "email": "akiricovich@gmail.com",
+        "removeCopyrights": true
+	},
+	"ftp": {
+		"host": "wemakesites.ru",
+		"login": "wemakesites",
+		"password": "wemakesites-root"
+	},
+	"pages": {
+		"home": {
+			"name": "Главная",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			}
+		},
+		"news": {
+			"name": "Новости",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			}
+		},
+		"article": {
+			"name": "Новость",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			}
+		},
+		"contacts": {
+			"name": "Контакты",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			}
+		},
+		"calendar": {
+			"name": "Календарь",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			}
+		},
+		"event": {
+			"name": "Событие",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			}
+		},
+		"education": {
+			"name": "Направления",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			}
+		},
+		"service1": {
+			"name": "Довузовская подготовка 1",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			}
+		},
+		"service2": {
+			"name": "Довузовская подготовка 2",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			}
+		},
+		"section": {
+			"name": "Строительство",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			}
+		},
+		"search": {
+			"name": "Поиск",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			}
+		},
+		"page404": {
+			"name": "404",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			}
+		}
+	}
+}

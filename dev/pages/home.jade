@@ -1,0 +1,148 @@
+extends ../templates/base
+
+block content
+    div(class="promo")
+        div(class="promo-title")
+            | Мы осуществляем работу с детьми
+            br
+            | на каждом этапе жизни
+        div(class="promo-items")
+            div(class="promo-item promo-item--1")
+                img(src="../dummy/mather.png", class="promo-item-photo")
+                a(href="#", class="promo-item-balloon")
+                    span Родительский комитет
+            div(class="promo-item promo-item--2")
+                img(src="../dummy/children.png", class="promo-item-photo")
+                a(href="#", class="promo-item-balloon")
+                    span Детский университет
+            div(class="promo-item promo-item--3")
+                img(src="../dummy/girl-enrollee.png", class="promo-item-photo")
+                a(href="#", class="promo-item-balloon")
+                    span Академия Абитуриента
+            div(class="promo-item promo-item--4")
+                img(src="../dummy/girl-student.png", class="promo-item-photo")
+                a(href="#", class="promo-item-balloon")
+                    span Академия Абитуриента
+                a(href="#", class="promo-item-balloon promo-item-balloon--inverse")
+                    span Обучение
+            div(class="promo-item promo-item--5")
+                img(src="../dummy/girl-manager.png", class="promo-item-photo")
+                a(href="#", class="promo-item-balloon promo-item-balloon--inverse")
+                    span Трудоустройство
+    
+    div(class="features")
+        div(class="features-title")
+            span(class="features-title-number") 7
+            span(class="features-title-text") причин поступить в дгту
+        div(class="features-tabs")
+            div(class="features-tabs-content")
+                div(id="features-1", class="features-tabs-content-item tabs-content-item active-tabs") 
+                    | ДГТУ - опорный многопрофильный технический университет на юге россии:
+                    span нам 85 лет
+                    span(class="text") здесь самые квалифицированные  преподователи и самое лучшиее образование
+                div(id="features-2", class="features-tabs-content-item tabs-content-item") 
+                    | Хороший университет
+                    span Очень!!!
+                    span(class="text") хорошее образование
+                div(id="features-3", class="features-tabs-content-item tabs-content-item") 
+                    | ДГТУ - опорный многопрофильный технический университет на юге россии:
+                    span нам 85 лет
+                    span(class="text") здесь самые квалифицированные  преподователи и самое лучшиее образование
+            div(class="features-tabs-footer") 
+                a(href="#features-1", class="link link-white features-tabs-footer-item tabs-heading-item active-tabs") 1
+                a(href="#features-2", class="link link-white features-tabs-footer-item tabs-heading-item") 2
+                a(href="#features-3", class="link link-white features-tabs-footer-item tabs-heading-item") 3
+                a(href="#features-4", class="link link-white features-tabs-footer-item tabs-heading-item") 4
+                a(href="#features-5", class="link link-white features-tabs-footer-item tabs-heading-item") 5
+                a(href="#features-6", class="link link-white features-tabs-footer-item tabs-heading-item") 6
+                a(href="#features-7", class="link link-white features-tabs-footer-item tabs-heading-item") 7
+                
+    div(class="president")
+        div(class="president-photo-holder")
+            img(src="../dummy/rector.png", class="president-photo")
+        div(class="president-info")
+            div(class="president-info-name") Месхи Бесарион Чохеович
+            div(class="president-info-post") Ректор ДГТУ, доктор технических наук, профессор
+            div(class="president-info-text") Наверное, самый удивительный результат киральной симметрии квазичастиц - это предсказание и наблюдение парадокса Клейна в графене. Парадокс  связан с увеличением вероятности  туннелирования релятивистской частицы, приближающейся к единице, когда высота барьера превышает 2moc^2 и в точности равной единице для безмассовых частиц. Это можно рассматривать как следствие рассеяния назад или же, как рождение и аннигиляцию пар частица-античастица в областях сильного электрического поля за счет механизма Швингера. Парадокс клейна для киральных квазичастиц в графене приводит к превращению электррона внутри потенциального барьера в дырку и к равной единице вероятности туннелирования через такой барьер по крайней мере при нормальном падении.
+    div(class="page-inner")
+        div(class="media")
+            div(class="media-banners")
+                a(href="#", class="media-banner-item")
+                    img(src="../dummy/news-1.jpg", class="media-banner-item-img")
+                a(href="#", class="media-banner-item")
+                    img(src="../dummy/news-2.jpg", class="media-banner-item-img")
+                a(href="#", class="media-banner-item")
+                    img(src="../dummy/news-3.jpg", class="media-banner-item-img")
+            div(class="media-news")
+                div(class="media-news-heading")
+                    span(class="media-news-heading-title") Новости
+                    a(href="#", class="link link-red link-red-bottom media-news-heading-link") все новости
+                div(class="media-news-items")
+                    div(class="media-news-item")
+                        div(class="media-news-item-heading")
+                            span(class="media-news-item-heading-date") 12.12.12
+                            a(class="link link-back link-black-inverse media-news-item-heading-link") Название новости
+                        div(class="media-news-item-text") Текст большой или маленький, не знаю...
+                    div(class="media-news-item")
+                        div(class="media-news-item-heading")
+                            span(class="media-news-item-heading-date") 12.12.12
+                            a(class="link link-back link-black-inverse media-news-item-heading-link") Название новости
+                        div(class="media-news-item-text") Текст большой или маленький, не знаю...
+                    div(class="media-news-item")
+                        div(class="media-news-item-heading")
+                            span(class="media-news-item-heading-date") 12.12.12
+                            a(class="link link-back link-black-inverse media-news-item-heading-link") Название новости
+                        div(class="media-news-item-text") Текст большой или маленький, не знаю...
+    
+    div(class="sort-events-holder")
+        div(class="page-inner")
+            div(class="calendar-events-header")
+                span(class="calendar-events-header-title") Календарь мероприятий
+                span(class="calendar-events-header-icon icon-calendar-ico-red-after")
+            div(class="sort-events--month")
+                a(href="#", class="link link-black link-black-bottom") Январь
+                a(href="#", class="link link-black link-black-bottom") Февраль
+                a(href="#", class="link link-black link-black-bottom") Март
+                a(href="#", class="link link-black link-black-bottom") Апрель
+                a(href="#", class="link link-black link-black-bottom") Май
+                a(href="#", class="link link-black link-black-bottom") Июнь
+                a(href="#", class="link link-black link-black-bottom") Июль
+                a(href="#", class="link link-black link-black-bottom") Август
+                a(href="#", class="link link-black link-black-bottom") Сентябрь
+                a(href="#", class="link link-black link-black-bottom") Октябрь
+                a(href="#", class="link link-black link-black-bottom") Ноябрь
+                a(href="#", class="link link-black link-black-bottom") Декабрь
+                
+    div(class="sort-events-holder")
+        div(class="calendar-events-items")
+            a(href="#", class="link calendar-events-item", style="background-image: url(../dummy/news-olympiads-2.jpg)")
+                span(href="#", class="tag") #олимпиада
+                div(class="calendar-events-info")
+                    span(class="calendar-events-info-title") Олимпиада по математике
+                    div(class="calendar-events-info-date") 
+                        | 11.04.2017
+                        span 14:00
+                    span(class="calendar-events-info-location") Ул. Улица, Главый холлл ДГТУ
+            a(href="#", class="link calendar-events-item", style="background-image: url(../dummy/news-olympiads.jpg)")
+                span(href="#", class="tag") #олимпиада
+                div(class="calendar-events-info")
+                    span(class="calendar-events-info-title") Олимпиада по математике
+                    div(class="calendar-events-info-date") 
+                        | 11.04.2017
+                        span 14:00
+                    span(class="calendar-events-info-location") Ул. Улица, Главый холлл ДГТУ
+            span(class="calendar-events-item calendar-events-item--empty")
+                span(class="calendar-events-item-not") Больше мероприятий на данный месяц не планируется
+    div(class="partners")
+        div(class="page-inner")
+            div(class="partners-list")
+                div(class="partners-item partners-item--rostvertol")
+                    img(src="../dummy/rostvertol.png", class="partners-item-photo")
+                div(class="partners-item partners-item--center-inverst")
+                    img(src="../dummy/center-inverst.png", class="partners-item-photo")
+                div(class="partners-item partners-item--real-madrid")
+                    img(src="../dummy/real-madrid.png", class="partners-item-photo")
+                div(class="partners-item partners-item--don")
+                    img(src="../dummy/don.png", class="partners-item-photo")
+                div(class="partners-item partners-item--GJ")
+                    img(src="../dummy/GJ.png", class="partners-item-photo")    

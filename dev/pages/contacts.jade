@@ -1,0 +1,108 @@
+extends ../templates/base
+
+block content
+    div(class="page-inner")
+        div(class="page-breadcrumbs")
+            a(href="home.html", class="link link-black-bottom page-breadcrumbs-item")
+                | Главная
+            span(class="page-breadcrumbs-item-badge")<
+            a(href="/news.html", class="link link-black-inverse page-breadcrumbs-item")
+                | Контакты
+
+        h1(class="page-heading")
+            | Контакты
+    div(class="map",data-center="[47.2373, 39.7123]", data-zoom="13", data-points='[{name:"1", position: "47.2373, 39.7123", icon: "../i/icons/point-white-map.png", description:"г. Ростов-На-Дону, пл. Гагарина, 1"}, {name:"2", position:"47.2232, 39.7339", icon: "../i/icons/point-orange-map.png", description: "г. Ростов-На-Дону, Социалистическая, 162"}]')
+    div(class="tabs tabs-map")
+        div(class="tabs-contacts")
+            div(class="tabs-heading")
+                div(class="page-inner")
+                    a(href="#youth-management", class="link link-black tabs-heading-item active-tabs") Управление профессиональной ориентации и поддержки талантливой молодежи
+                    a(href="#selection-committee", class="link link-black tabs-heading-item") приемная комиссия
+            div(class="tabs-content")
+                div(class="tabs-content-item active-tabs",id="youth-management")
+                    div(class="page-inner")
+                        div(class="page-text tabs-contacts-information")
+                            a(href="tel:+78632381759", class="link link-black tabs-contacts-number") +7 (863) 238 17 59
+                            span(class="tabs-contacts-time") в будние дни с 8:30 до 17:00
+                            span(class="tabs-contacts-location") 
+                                | г. Ростов-на-Дону, пл. Гагарина, 1
+                                br
+                                | 8 корпус, ауд.607
+                            a(href="mailto:spu-10.7@donstu.ru", class="link link-red link-red-inverse tabs-contacts-mail") spu-10.7@donstu.ru
+                        div(class="slider-contacts tabs-contacts-persons")
+                            a(href="#", class="link tabs-contacts-persons-item")
+                                img(src="../dummy/who-is-it.jpg")
+                                div(class="tabs-contacts-persons-item-data")
+                                    div(class="tabs-contacts-persons-item-data-text")
+                                        span(class="tabs-contacts-persons-item-surname") Иванова
+                                        span(class="tabs-contacts-persons-item-name") Ольга Викторовна
+                                        span(class="tabs-contacts-persons-item-position") Заместитель
+                            a(href="#", class="link tabs-contacts-persons-item", style="background-image: url(../dummy/who-is-it-2.jpg)")
+                                img(src="../dummy/who-is-it-2.jpg")
+                                div(class="tabs-contacts-persons-item-data")
+                                    div(class="tabs-contacts-persons-item-data-text")
+                                        span(class="tabs-contacts-persons-item-surname") Иванова
+                                        span(class="tabs-contacts-persons-item-name") Ольга Сергеевна
+                                        span(class="tabs-contacts-persons-item-position") Заместитель
+                            a(href="#", class="link tabs-contacts-persons-item", style="background-image: url(../dummy/who-is-it.jpg)")
+                                img(src="../dummy/who-is-it.jpg")
+                                div(class="tabs-contacts-persons-item-data")
+                                    div(class="tabs-contacts-persons-item-data-text")
+                                        span(class="tabs-contacts-persons-item-surname") Иванова
+                                        span(class="tabs-contacts-persons-item-name") Ольга Викторовна
+                                        span(class="tabs-contacts-persons-item-position") Заместитель
+
+                div(class="tabs-content-item",id="selection-committee")
+                    div(class="page-inner")
+                        div(class="page-text tabs-contacts-information--full") простая модель парного взаимодействия неполярных молекул, описывающая зависимость энергии взаимодействия двух частиц от расстояния между ними. Эта модель достаточно реалистично передаёт свойства реального взаимодействия сферических неполярных молекул и поэтому широко используется в расчётах и при компьютерном моделировании. Впервые этот вид потенциала был предложен Леннард-Джонсом в 1924 году.
+                        div(class="page-text tabs-contacts-information")
+                            a(href="tel:+78632381759", class="link link-black tabs-contacts-number") +7 (863) 238 17 59
+                            span(class="tabs-contacts-time") в будние дни с 8:30 до 17:00
+                            span(class="tabs-contacts-location") 
+                                | г. Ростов-на-Дону, пл. Гагарина, 1
+                                br
+                                | 8 корпус, ауд.607
+                            a(href="mailto:spu-10.7@donstu.ru", class="link link-red link-red-inverse tabs-contacts-mail") spu-10.7@donstu.ru
+                        div(class="slider-contacts tabs-contacts-persons")
+                            a(href="#", class="link tabs-contacts-persons-item", style="background-image: url(../dummy/person-1.png)")
+                                img(src="../dummy/person-1.png")
+                                div(class="tabs-contacts-persons-item-data")
+                                    div(class="tabs-contacts-persons-item-data-text")
+                                        span(class="tabs-contacts-persons-item-surname") Иванов
+                                        span(class="tabs-contacts-persons-item-name") Иван Иванович
+                                        span(class="tabs-contacts-persons-item-position") Заместитель
+                            a(href="#", class="link tabs-contacts-persons-item", style="background-image: url(../dummy/person-1.png)")
+                                img(src="../dummy/person-1.png")
+                                div(class="tabs-contacts-persons-item-data")
+                                    div(class="tabs-contacts-persons-item-data-text")
+                                        span(class="tabs-contacts-persons-item-surname") Иванов
+                                        span(class="tabs-contacts-persons-item-name") Иван Иванович
+                                        span(class="tabs-contacts-persons-item-position") Заместитель
+                            a(href="#", class="link tabs-contacts-persons-item", style="background-image: url(../dummy/person-1.png)")
+                                img(src="../dummy/person-1.png")
+                                div(class="tabs-contacts-persons-item-data")
+                                    div(class="tabs-contacts-persons-item-data-text")
+                                        span(class="tabs-contacts-persons-item-surname") Иванов
+                                        span(class="tabs-contacts-persons-item-name") Иван Иванович
+                                        span(class="tabs-contacts-persons-item-position") Заместитель
+
+    div(class="sort-events-holder")
+        div(class="page-inner")
+            div(class="entry")
+                div(class="page-text")
+                    h2 У вас есть вопросы? пишите нам
+                    form(class="form")
+                        div(class="form-row")
+                            div(class="form-item-holder form-item-holder--w4")
+                                select(class="form-item form-item--select")
+                                    option Участие
+                                    option Принятие
+                                    option Отторжение
+                                input(type="text", class="form-item form-item--text", name="mobile", placeholder="Телефон", required)
+                            div(class="form-item-holder form-item-holder--w4")
+                                input(type="text", class="form-item form-item--text", name="lastname", placeholder="Имя", required)
+                                input(type="email", class="form-item form-item--text", name="email", placeholder="E-mail", required)
+                            div(class="form-item-holder form-item-holder--w4")
+                                textarea(rows="2", name="text", class="form-item form-item--textarea", placeholder="Ваш вопрос")
+                            button(type="submit", name="send-form" class="form-item form-item--submit")Отправить
+                

@@ -1,0 +1,226 @@
+extends ../templates/base
+
+block content
+    div(class="page-inner")
+        div(class="page-breadcrumbs")
+            a(href="/home.html", class="link link-black-bottom page-breadcrumbs-item")
+                | Главная
+            span(class="page-breadcrumbs-item-badge")<
+            a(href="/education.html", class="link link-black-inverse page-breadcrumbs-item")
+                | Довузовская подготовка
+        h1(class="page-heading")
+            | Направления
+        div(class="page-text")
+            p Потенциал Леннард-Джонса — простая модель парного взаимодействия неполярных молекул, описывающая зависимость энергии взаимодействия двух частиц от расстояния между ними.Потенциал Леннард-Джонса — простая модель парного взаимодействия неполярных молекул, описывающая зависимость энергии взаимодействия двух частиц от расстояния между ними.Потенциал Леннард-Джонса — простая модель парного взаимодействия неполярных молекул, описывающая зависимость энергии взаимодействия двух частиц от расстояния между ними.Потенциал Леннард-Джонса — простая модель парного взаимодействия неполярных молекул, описывающая зависимость энергии взаимодействия двух частиц от расстояния между ними.Потенциал Леннард-Джонса — простая модель парного взаимодействия неполярных молекул, описывающая зависимость энергии взаимодействия двух частиц от расстояния между ними.
+    div(class="sort-events-holder")
+        div(class="page-inner")
+            div(class="sort-events--type sort-education")
+                label(class="filter-events")
+                    input(type="checkbox", class="form-item--checkbox") 
+                    span(class="form-item-label--text") показать все
+                label(class="filter-events")
+                    input(type="checkbox", class="form-item--checkbox")
+                    span(class="form-item-label--text") Напраления подготовки к аспирантуре
+                label(class="filter-events")
+                    input(type="checkbox", class="form-item--checkbox")
+                    span(class="form-item-label--text") По приоритетным направлениям
+                label(class="filter-events")
+                    input(type="checkbox", class="form-item--checkbox")
+                    span(class="form-item-label--text") АИОР
+                label(class="filter-events")
+                    input(type="checkbox", class="form-item--checkbox")
+                    span(class="form-item-label--text") CDIO
+            div(class="sort-events--type sort-education")
+                label(class="filter-events filter-events--more", data-slide-more="form-education")
+                    input(type="checkbox", class="form-item--checkbox") 
+                    span(class="form-item-label--text") форма обучения
+                label(class="filter-events filter-events--more", data-slide-more="reasons-admission")
+                    input(type="checkbox", class="form-item--checkbox")
+                    span(class="form-item-label--text") основание поступления
+                label(class="filter-events filter-events--more", data-slide-more="level-training")
+                    input(type="checkbox", class="form-item--checkbox")
+                    span(class="form-item-label--text") уровень подготовки
+                label(class="filter-events filter-events--more", data-slide-more="faculties")
+                    input(type="checkbox", class="form-item--checkbox")
+                    span(class="form-item-label--text") по факультетам
+                label(class="filter-events filter-events--more", data-slide-more="industry")
+                    input(type="checkbox", class="form-item--checkbox")
+                    span(class="form-item-label--text") по отраслям
+                    
+                    
+    div(class="sort-events-holder sort-events--more", id="industry")
+        div(class="sort-events-container")
+            div(class="page-inner")
+                div(class="sort-events--type sort-education--more")
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox") 
+                        span(class="form-item-label--text") Бизнес и управление
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox")
+                        span(class="form-item-label--text") Нефтегазовая промышленность
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox")
+                        span(class="form-item-label--text") Машиностроение
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox")
+                        span(class="form-item-label--text") Химическая промышленность
+                div(class="sort-events--type sort-education--more")
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox") 
+                        span(class="form-item-label--text") Природопользование
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox")
+                        span(class="form-item-label--text") Нанотехнологии
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox")
+                        span(class="form-item-label--text") Физика
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox")
+                        span(class="form-item-label--text") Электроника и приборостроение
+                div(class="sort-events--type sort-education--more")
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox") 
+                        span(class="form-item-label--text") Информационные технологии
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox")
+                        span(class="form-item-label--text") Дизайн
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox")
+                        span(class="form-item-label--text") Безопасность и контроль качества
+                div(class="sort-events--type sort-education--more")
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox") 
+                        span(class="form-item-label--text") Медицина
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox")
+                        span(class="form-item-label--text") Металлургия
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox")
+                        span(class="form-item-label--text") Энергетика
+                        
+                        
+    div(class="sort-events-holder sort-events--more", id="faculties")
+        div(class="sort-events-container")
+            div(class="page-inner")
+                div(class="sort-events--type sort-education--more")
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox") 
+                        span(class="form-item-label--text") Бизнес и управление
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox")
+                        span(class="form-item-label--text") Нефтегазовая промышленность
+                div(class="sort-events--type sort-education--more")
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox") 
+                        span(class="form-item-label--text") Природопользование
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox")
+                        span(class="form-item-label--text") Нанотехнологии
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox")
+                        span(class="form-item-label--text") Электроника и приборостроение
+                div(class="sort-events--type sort-education--more")
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox") 
+                        span(class="form-item-label--text") Информационные технологии
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox")
+                        span(class="form-item-label--text") Дизайн
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox")
+                        span(class="form-item-label--text") Безопасность и контроль качества
+                div(class="sort-events--type sort-education--more")
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox")
+                        span(class="form-item-label--text") Энергетика
+                    
+    div(class="table-education-holder")
+        div(class="page-inner")
+            table(class="table-education")
+                thead
+                    tr
+                        th Код
+                        th Направление
+                        th Форма обучения
+                        th основание поступления
+                        th Уровень подготовки
+                        th Вступительные испытания
+                tbody
+                    tr
+                        td 
+                            span 11111
+                        td 
+                            span прикладная математика
+                        td 
+                            span очная
+                        td 
+                            span бюджетная основа
+                        td 
+                            span магистратура
+                        td 
+                            span математика
+                    tr
+                        td 
+                            span 11111
+                        td 
+                            span прикладная математика и физика
+                        td 
+                            span очная
+                        td 
+                            span контрактная основа
+                        td 
+                            span магистратура
+                        td 
+                            span математика
+                    tr
+                        td 
+                            span 11111
+                        td 
+                            span Математическое обеспечение и администрирование информационных систем
+                        td 
+                            span заочная
+                        td 
+                            span бюджетная основа
+                        td 
+                            span бакалавриат
+                        td 
+                            span математика
+                    tr
+                        td 
+                            span 11111
+                        td 
+                            span информатика и вычислительная техника
+                        td 
+                            span очная
+                        td 
+                            span контрактная основа
+                        td 
+                            span прикладной бакавриат
+                        td 
+                            span математика, информатика, информационные-комуникационные технологии
+                    tr
+                        td 
+                            span 11111
+                        td 
+                            span прикладная математика
+                        td 
+                            span очная
+                        td 
+                            span бюджетная основа
+                        td 
+                            span магистратура
+                        td 
+                            span математика
+                    tr
+                        td 
+                            span 11111
+                        td 
+                            span прикладная математика
+                        td 
+                            span очная
+                        td 
+                            span бюджетная основа
+                        td 
+                            span магистратура
+                        td 
+                            span математика

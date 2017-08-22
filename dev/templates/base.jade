@@ -1,0 +1,310 @@
+include ../lib/html/html.jade
+doctype html
+<!--[if IE 7]><html lang="ru" prefix="og: http://ogp.me/ns#" class="ie8 no-js"><![endif]-->
+<!--[if IE 8]><html lang="ru" prefix="og: http://ogp.me/ns#" class="ie8 no-js"><![endif]-->
+<!--[if IE 9]><html lang="ru" prefix="og: http://ogp.me/ns#" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+html(lang="ru", class="no-js", prefix="og:http://ogp.me/ns#")
+	<!--<![endif]-->
+	head
+		+headerMeta({
+			charset: "utf-8",
+			keywords: info.keywords,
+			description: info.description,
+			title: info.title,
+			robots: "index, follow",
+			viewport: "width=device-width, initial-scale=1.0"
+		})
+		+openGraph({
+			type: "website",
+			siteName: info.siteName, 
+			title: info.title,
+			description: info.description,
+			url: info.productionUrl,
+			image: info.image
+		})
+		+webIcons({
+			favicon: {
+				src: "/i/favicon.ico"
+			},
+			appleTouchIcon: [
+				{
+					src: "../i/icons/apple-touch-icon.jpg"
+				}, {
+					src: "../i/icons/apple-touch-icon-76.jpg",
+					size: "76x76"
+				}, {
+					src: "../i/icons/apple-touch-icon-140.jpg",	
+					size: "140x140"
+				}, {
+					src: "../i/icons/apple-touch-icon-152.jpg",
+					size: "152x152"
+				}
+			]
+		})
+		+addCSS([
+			{
+				media: "screen",
+				href: "../css/sprite.css",
+				noCache: true,
+			}, {
+				media: "screen",
+				href: "../css/" + info.code + ".css",
+				noCache: true
+			}, {
+				media: "screen",
+				href: "../css/plugins/slick.css",
+				noCache: true
+			}, {
+				media: "screen",
+				href:"https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic-ext"
+			},
+		])
+
+	body(itemscope, itemtype="http://schema.org/WebPage")
+
+		div(class="page")
+			header(class="page-header", itemscope, itemtype="http://schema.org/WPHeader")
+				div(class="header-row header-row--top")
+					div(class="page-inner")
+						if page.code == "home"	
+							div(class="header-col")
+								img(src="../i/icons/logo.png", class="header-logo")
+								span(class="header-name") Абитуриент
+						else
+							a(href="/home.html",class="header-col")
+								img(src="../i/icons/logo.png", class="header-logo")
+								span(class="header-name") Абитуриент
+						div(class="header-col")
+							div(class="header-col--row col-row--top")
+								| Приемная комиссия (звонок по России бесплатен)
+								div(class="header-contacts")
+									a(href="tel:+78632738566", class="link link-red link-bold")
+										| 8 (863) 273-85-66, 
+									a(href="tel:+78001001330", class="link link-red link-bold")
+										| 8(800) 100-13-30
+							div(class="header-col--row")
+								| УПОиПТМ
+								div(class="header-contacts")
+									a(href="tel:+78632381759", class="link link-red link-bold")
+										| 8 (863) 238-17-59,
+									a(href="mailto:spu-10.7@donstu.ru", class="link link-red link-bold")
+										| spu-10.7@donstu.ru
+						div(class="header-col")
+							div(class="header-col--row col-row--top row-social")
+								div(class="header-bar")
+									a(href="/login", class="user-bar-item link link-red-bottom")
+										Вход
+									a(href="/register", class="user-bar-item link link-red-bottom")
+										Регистрация
+								div(class="header-social")
+									a(href="https://vk.com/", target="_blank", class="header-social-item icon-vk-red-inner")
+										| ВКонтакте
+									a(href="https://vk.com/", target="_blank", class="header-social-item icon-twitter-red-inner")
+										| Twitter
+									a(href="https://vk.com/", target="_blank", class="header-social-item icon-facebook-red-inner")
+										| Facebook
+									a(href="https://vk.com/", target="_blank", class="header-social-item icon-ok-red-inner")
+										| Одноклассники
+									a(href="https://vk.com/", target="_blank", class="header-social-item icon-instagram-red-inner")
+										| Instagram
+									a(href="https://vk.com/", target="_blank", class="header-social-item icon-youtube-red-inner")
+										| YouTube
+							div(class="header-col--row")
+								div(class="header-search")
+									form(action="/search.html")
+										input(type="text", class="header-search-item")
+										button(type="submit", title="Найти", class="header-search-submit")
+											span(class="icon-search-loupe-inner")
+				div(class="header-row header-row--middle")
+					div(class="page-inner page-inner-menu")
+						+menu({
+							rootClass: "header-menu",
+							items: [
+								{
+									name: "Почему ДГТУ?",
+									href: "#",
+									items: [
+										{
+											name: "7 причин поступть в ДГТУ",
+											href: "#"
+										}, {
+											name: "Кампус",
+											href: "#"
+										}, {
+											name: "Социальная жизнь",
+											href: "#"
+										}, {
+											name: "Военное обучение",
+											href: "#"
+										}, {
+											name: "Стипендия и материальная поддержка",
+											href: "#"
+										}, {
+											name: "Трудоустройство",
+											href: "#"
+										}, {
+											name: "Фото и видео о ДГТУ",
+											href: "#"
+										}
+									]
+								}, {
+									name: "Довузовская подготовка",
+									href: "/service1.html"
+								}, {
+									name: "Образование",
+									href: "/education.html"
+								}, {
+									name: "Как поступить?",
+									href: "#"
+								}, {
+									name: "Календарь абитуриента",
+									href: "/calendar.html"
+								}, {
+									name: "Профориентация",
+									href: "#"
+								}
+							]
+						})
+				div(class="header-row header-row--bottom")
+					div(class="sections")
+						a(href="#", class="sections-item", style="background-image: url(../dummy/olympiads.jpg)")
+							div(class="sections-item-text")
+								| Олимпиады
+						a(href="#", class="sections-item", style="background-image: url(../dummy/competition.jpg)")
+							div(class="sections-item-text")
+								| Гранты
+								br
+								| Конкурсы
+						a(href="#", class="sections-item", style="background-image: url(../dummy/test.jpg)")
+							div(class="sections-item-text")
+								| Профориентационное 
+								br
+								| тестирование
+						a(href="#", class="sections-item", style="background-image: url(../dummy/teacher.jpg)")
+							div(class="sections-item-text")
+								| Учителям
+						a(href="#", class="sections-item", style="background-image: url(../dummy/tour.jpg)")
+							div(class="sections-item-text")
+								| ДГТУ-Тур
+						a(href="#", class="sections-item", style="background-image: url(../dummy/open-day.jpg)")
+							div(class="sections-item-text")
+								| Дни открытых дверей
+								
+			main(class="page-content")
+				block content
+
+		footer(class="page-footer", itemscope, itemtype="http://schema.org/WPFooter")
+			div(class="page-inner")
+				div(class="footer-row")
+					div(class="footer-col")
+						div(class="footer-address")
+							p
+								| Донской государственный технический университет
+							p
+								| Площадь Гагарина 1, 
+								br
+								| Ростов-на-Дону, 344000, Россия
+							a(href="tel:+78632381759", class="footer-phone-link")
+								| 8 (863) 238-17-59
+							div(class="footer-social")
+								a(href="https://vk.com/", target="_blank", class="footer-social-item icon-vk-white-inner")
+									| ВКонтакте
+								a(href="https://vk.com/", target="_blank", class="footer-social-item icon-twitter-white-inner")
+									| Twitter
+								a(href="https://vk.com/", target="_blank", class="footer-social-item icon-facebook-white-inner")
+									| Facebook
+								a(href="https://vk.com/", target="_blank", class="footer-social-item icon-ok-white-inner")
+									| Одноклассники
+								a(href="https://vk.com/", target="_blank", class="footer-social-item icon-instagram-white-inner")
+									| Instagram
+								a(href="https://vk.com/", target="_blank", class="footer-social-item icon-you-tube-white-inner")
+									| YouTube
+
+					div(class="footer-col")
+						div(class="footer-contacts")
+							p
+								| Приемная комиссия
+							div(class="footer-contacts-item")
+								a(href="tel:+78632738566", class="footer-phone-link")
+									| 8 (863) 273-85-66
+								br
+								a(href="tel:+78001001330", class="footer-phone-link")
+									| 8 (800) 100-13-30
+							p
+								| УПОиПТМ
+							div(class="footer-contacts-item")
+								a(href="tel:+78632738566", class="footer-phone-link")
+									| 8 (863) 238-17-59,
+								br
+								a(href="mailto:spu-10.7@donstu.ru", class="footer-email-link")
+									| spu-10.7@donstu.ru
+					div(class="footer-col")
+						+menu({
+							rootClass: "footer-menu",
+							items: [
+								{
+									name: "Почему ДГТУ",
+									href: "#",
+									current: (page.code == "partnership" ? true : false)
+								}, {
+									name: "Довузовская подготовка",
+									href: "#",
+									current: (page.code == "delivery" ? true : false)
+								}, {
+									name: "Образование",
+									href: "#",
+									current: (page.code == "download" ? true : false)
+								}, {
+									name: "Как поступить?",
+									href: "#",
+									current: (page.code == "download" ? true : false)
+								}, {
+									name: "Календарь абитуриента",
+									href: "#",
+									current: (page.code == "download" ? true : false)
+								}, {
+									name: "Профориентация",
+									href: "#",
+									current: (page.code == "download" ? true : false)
+								}
+							]
+						})
+					div(class="footer-col")
+						div(class="footer-info")
+							div(class="footer-info-item")
+								a(href="#")
+									span(class="icon-ask-question-before icon-not-transition")
+									span(class="footer-info-icon") Связаться с нами
+							div(class="footer-info-item")
+								a(href="#")
+									span(class="icon-search-map-before icon-not-transition")
+									span(class="footer-info-icon") Найти на карте
+							div(class="footer-info-item")
+								a(href="#")
+									span(class="icon-faq-before icon-not-transition") 
+									span(class="footer-info-icon") FAQ
+
+		+addJS([
+			{
+				src: "http://code.jquery.com/jquery-1.11.3.min.js"
+			}, {
+				src: "http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU"
+			}, {
+				src: "../js/plugins/isotope-docs.min.js"
+			}, {
+				src: "../js/plugins/fotorama.js"
+			}, {
+				src: "../js/plugins/jcf.js"
+			}, {
+				src: "../js/plugins/jcf.radio.js"
+			}, {
+				src: "../js/plugins/jcf.checkbox.js"
+			}, {
+				src: "../js/plugins/jcf.select.js"
+			}, {
+				src: "../js/plugins/slick.min.js"
+			}, {
+				src: "../js/" + info.code + ".js"
+			}
+		])
