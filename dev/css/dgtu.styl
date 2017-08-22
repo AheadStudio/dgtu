@@ -489,6 +489,11 @@ button:hover.sections-arrow-next:after
 	&:hover
 		border-bottom-color transparent
 
+.link-not-active
+	pointer-events none
+	cursor default
+
+	color #717171
 /*** // link ***/
 
 /*** tags ***/
@@ -549,8 +554,8 @@ button:hover.sections-arrow-next:after
 
 .page-text
 	p
-		margin-bottom 40px
-		line-height 22px
+		margin-bottom 35px
+		line-height 1.7
 		font-size 14px
 	h2
 		margin-bottom 25px
@@ -567,14 +572,14 @@ button:hover.sections-arrow-next:after
 
 		text-transform uppercase
 	h4
-		margin-bottom 25px
+		margin-bottom 30px
 
 		font-size 18px
 		font-weight bold
 
 		text-transform uppercase
 	h5
-		margin-bottom 25px
+		margin-bottom 22px
 
 		font-size 16px
 		font-weight bold
@@ -604,6 +609,7 @@ button:hover.sections-arrow-next:after
 		display block
 
 		margin-bottom 30px
+		margin-top -20px
 
 		.social-block-item
 			margin-right 10px
@@ -635,6 +641,7 @@ button:hover.sections-arrow-next:after
 	.sphere
 		height 100px
 		border-bottom 15px solid color-red
+		margin-bottom 15px
 
 		.sphere-img
 			display inline-block
@@ -843,7 +850,7 @@ button:hover.sections-arrow-next:after
 	margin 30px 0
 
 .page-breadcrumbs
-	padding 40px 0 70px 0
+	padding 25px 0 65px 0
 
 	font-weight bold
 	font-size 12px
@@ -874,7 +881,7 @@ button:hover.sections-arrow-next:after
 	margin-bottom 30px
 	.pager
 		width 100%
-		padding 55px 0 50px 0
+		padding 50px 0 40px 0
 
 		text-align center
 		&-item
@@ -897,8 +904,8 @@ button:hover.sections-arrow-next:after
 			bottom 10px
 
 		position relative
-		width 48%
-		margin-right 2%
+		width 47%
+		margin-right 4%
 		margin-bottom 30px
 		display inline-block
 
@@ -929,7 +936,7 @@ button:hover.sections-arrow-next:after
 
 		.news-item-heading-info
 			display inline-block
-			width 54%
+			width 52%
 			.news-item-title
 				margin-bottom 10px
 			.news-item-heading-title
@@ -964,6 +971,7 @@ button:hover.sections-arrow-next:after
 		.news-item-text
 			display block
 
+			line-height 1.5
 			font-size 14px
 			color #000
 
@@ -1010,7 +1018,7 @@ button:hover.sections-arrow-next:after
 
 /* slider */
 .page-text
-	margin-bottom 80px
+	margin-bottom 70px
 
 .slider,
 .slider-bottom,
@@ -1116,10 +1124,12 @@ button:hover.sections-arrow-next:after
 
 	.documents
 		display block
-		margin-bottom 50px
+		margin-bottom 70px
 		a
 			display block
 			margin-bottom 10px
+
+			text-transform uppercase
 
 			.icon-download-file-inner
 				margin-right 10px
@@ -1138,7 +1148,7 @@ button:hover.sections-arrow-next:after
 		width 90%
 
 		margin 0 auto
-		margin-bottom 60px
+		margin-bottom 30px
 
 		font-size 16px
 		line-height 20px
@@ -1196,6 +1206,8 @@ button:hover.sections-arrow-next:after
 			font-size 14px
 
 		.simular-news-item-text
+			line-height 1.5
+
 			font-size 12px
 /*-- //news detail --*/
 
@@ -1211,6 +1223,8 @@ button:hover.sections-arrow-next:after
 	background url("../dummy/background-orange.jpg") no-repeat
 	background-size cover
 
+	&--olympiads
+		padding-top 0
 	.calendar-events-item--empty
 		&:after
 			content ""
@@ -1319,7 +1333,7 @@ button:hover.sections-arrow-next:after
 	.calendar-events-header
 		display block
 
-		margin-top 50px
+		margin-top 30px
 		margin-bottom 30px
 
 		text-align center
@@ -1362,8 +1376,15 @@ button:hover.sections-arrow-next:after
 		margin-bottom 30px
 
 	.sort-events--month
-		margin-bottom 30px
+		margin-bottom 35px
 
+	.sort-events--month--main
+		a
+			margin-right 40px
+
+			&:last-child
+				margin-right 0
+				
 	.sort-events--years,
 	.sort-events--month,
 	.sort-events--type
@@ -1420,7 +1441,7 @@ button:hover.sections-arrow-next:after
 
 /*** radio, checkbox input ***/
 .sort-events--type
-	margin-bottom 0
+	margin-bottom 20px
 
 .filter-events
 	display inline-block
@@ -1564,16 +1585,20 @@ button:hover.sections-arrow-next:after
 		margin-top 50px
 
 	.button-events
-		width 80%
+		width 70%
 		margin 0 auto
 
-		margin-bottom 40px
-		margin-top 40px
+		margin-top 50px
+		margin-bottom 30px
 
 		text-align center
 		font-size 14px
+
 		.btn-event-load
 			width 100%
+			display block
+			box-sizing border-box
+
 			padding 16px
 			border 1px solid #b2b2b2
 
@@ -1611,7 +1636,7 @@ button:hover.sections-arrow-next:after
 
 			right 0
 
-			margin-bottom 20px
+			margin-bottom 30px
 
 			padding 20px
 
@@ -1647,14 +1672,14 @@ button:hover.sections-arrow-next:after
 				margin-bottom 30px
 
 				float left
-				width 50%
+				width 56%
 
 				&--news,&--page
 					width 62%
 					margin-bottom 0
 					.events-item-inner-type
 						span
-							font-size 16px
+							font-size 18px
 							margin-right 20px
 						a
 							position inherit
@@ -1688,6 +1713,7 @@ button:hover.sections-arrow-next:after
 				.events-item-inner-text
 					margin-top 20px
 					font-size 12px
+					line-height 1.5
 
 
 			.tag
@@ -1706,7 +1732,7 @@ button:hover.sections-arrow-next:after
 			position relative
 
 			padding 15px
-			margin-bottom 20px
+			margin-bottom 30px
 
 
 			border 1px solid color-red
@@ -1745,6 +1771,7 @@ button:hover.sections-arrow-next:after
 
 				.events-item-inner-text
 					margin-top 20px
+					line-height 1.5
 
 			.tag
 				position absolute
@@ -1779,7 +1806,8 @@ button:hover.sections-arrow-next:after
 			float left
 
 			.form
-				width 80%
+				width 75%
+
 		.tabs-content-item.active-tabs
 			display block
 		.tabs-content-item
@@ -1789,6 +1817,7 @@ button:hover.sections-arrow-next:after
 
 	.tabs-heading-item.active-tabs
 		background #fff
+		font-weight bold
 		&:before
 			content ""
 			position absolute
@@ -1818,7 +1847,7 @@ button:hover.sections-arrow-next:after
 		text-align center
 		text-transform uppercase
 
-		transition all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+		transition background 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
 		&:hover:not(.active-tabs)
 			background #eac51a
 
@@ -2044,7 +2073,7 @@ button:hover.sections-arrow-next:after
 		width 100%
 
 		margin-top -30px
-		margin-bottom 150px
+		margin-bottom 190px
 
 		height 500px
 
@@ -2247,7 +2276,7 @@ button:hover.sections-arrow-next:after
 	height 630px
 
 	margin 0 auto
-	margin-bottom 200px
+	margin-bottom 220px
 
 	background url("../dummy/students-1.png") no-repeat
 	background-size contain
@@ -2267,6 +2296,7 @@ button:hover.sections-arrow-next:after
 
 			color color-red
 			font-size 177px
+			font-weight  bold
 
 		.features-title-text
 			display inline-block
@@ -2295,12 +2325,19 @@ button:hover.sections-arrow-next:after
 			color #fff
 
 			.features-tabs-content-item
+
 				display none
 				span:not(.text)
 					display block
 					margin-bottom 25px
-					font-size 45px
+
+					line-height 1.5
+
+					font-size 30px
+					font-weight bold
 				.text
+					font-size 20px
+					line-height 1.5
 					display block
 					text-transform uppercase
 
@@ -2349,15 +2386,18 @@ button:hover.sections-arrow-next:after
 
 	width 100%
 	height 330px
-	margin-bottom 50px
+	margin-bottom 110px
 
 	background url("../dummy/dgtu.jpg") no-repeat
 	background-size cover
 
+	.president-block
+		clearfix()
+
 	.president-photo-holder
 		float left
 
-		width 35%
+		width 30%
 		text-align right
 
 		img
@@ -2365,10 +2405,10 @@ button:hover.sections-arrow-next:after
 	.president-info
 		float left
 
-		width 800px
+		width 60%
 
 		margin-top 70px
-		margin-left 35px
+		margin-left 2%
 
 		.president-info-name
 			margin-bottom 15px
@@ -2387,6 +2427,7 @@ button:hover.sections-arrow-next:after
 			color #fff
 
 		.president-info-text
+			line-height 1.5
 			font-size 14px
 
 			font-weight normal
@@ -2400,7 +2441,9 @@ button:hover.sections-arrow-next:after
 .media
 	width 100%
 	overflow hidden
-	margin-bottom 30px
+
+	margin-bottom 80px
+
 	.media-banners
 		width 35%
 
@@ -2471,8 +2514,9 @@ button:hover.sections-arrow-next:after
 /*** partners ***/
 
 .partners
-	margin-top 100px
-	height 300px
+
+	height 250px
+
 	.partners-list
 		position relative
 
@@ -2527,9 +2571,11 @@ button:hover.sections-arrow-next:after
 				width 100%
 				float none
 
+				line-height 1.5
+
 			.tabs-contacts-number
 				display block
-				margin-bottom 10px
+				margin-bottom 5px
 				font-size 30px
 
 			.tabs-contacts-time
@@ -2630,7 +2676,7 @@ button:hover.sections-arrow-next:after
 			display inline-block
 			float left
 
-			width 30%
+			width 25%
 
 			padding 20px 0px 20px 10px
 
@@ -2691,7 +2737,7 @@ button:hover.sections-arrow-next:after
 		margin-bottom 0
 
 	.form
-		margin-top 40px
+		margin-top 30px
 		margin-bottom 40px
 
 		.form-item-holder

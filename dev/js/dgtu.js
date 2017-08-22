@@ -71,7 +71,7 @@
 				$(".sections").slick({
 					infinite: true,
 					slidesToShow: 5,
-					slidesToScroll: 1,
+					slidesToScroll: 3,
 					dots: false,
 					prevArrow: "<button type='button' class='sections-arrow sections-arrow-prev icon-arrow-left-red-before icon-arrow-left-white-after'></button>",
 					nextArrow: "<button type='button' class='sections-arrow sections-arrow-next icon-arrow-right-red-before icon-arrow-right-white-after'></button>",
