@@ -219,6 +219,12 @@ body
 		background-position center center
 		background-size cover
 
+		transition transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+
+		&:hover
+			transform scale(1.1)
+			z-index 100
+
 		&:before
 			content ""
 
@@ -385,11 +391,17 @@ button:hover.sections-arrow-next:after
 		text-decoration none
 		border-bottom 1px solid transparent
 		transition border-bottom-color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+
 		&:hover
-			border-bottom-color #dfdfdf
+			border-bottom-color color-red
+
+			.footer-menu-item-name
+				color color-red
+
 		&-name
 			color #dfdfdf
 			text-transform uppercase
+
 		&-holder
 			margin-bottom 18px
 
@@ -398,18 +410,39 @@ button:hover.sections-arrow-next:after
 	margin-top 30px
 
 	&-item
-		margin-right 10%
+		position relative
+		margin-right 18%
 
 		overflow hidden
 		text-indent -9999px
 
-		transition opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-
 		&:last-child
 			margin-right 0%
 
+		&:before
+			position absolute
+
+			opacity 1
+			top 0
+			left 0
+
+			transition opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+
+		&:after
+			position absolute
+			top 0
+			left 0
+
+			opacity 0
+
+
+			transition opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+
 		&:hover
-			opacity 0.5
+			&:before
+				opacity 0
+			&:after
+				opacity 1
 
 
 /*** //FOOTER STYLES ***/
@@ -525,6 +558,8 @@ button:hover.sections-arrow-next:after
 		color #000
 
 		transition all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+
+		cursor pointer
 		&:hover
 			background color-red
 			color #fff
@@ -888,14 +923,16 @@ button:hover.sections-arrow-next:after
 			margin-right 15px
 
 			text-decoration none
-			font-size 22px
+			font-size 20px
+
+
+			color #000
+		.active
 			font-weight bold
 
 			color color-red
-		.active
-			font-weight 300
-			color #000
 .news-list
+	clearfix()
 	.news-item
 		.item--more
 			display none
@@ -903,6 +940,7 @@ button:hover.sections-arrow-next:after
 			right 10px
 			bottom 10px
 
+		float left
 		position relative
 		width 47%
 		margin-right 4%
@@ -1384,7 +1422,7 @@ button:hover.sections-arrow-next:after
 
 			&:last-child
 				margin-right 0
-				
+
 	.sort-events--years,
 	.sort-events--month,
 	.sort-events--type
@@ -1395,13 +1433,16 @@ button:hover.sections-arrow-next:after
 		text-transform uppercase
 		text-align center
 		a
-			margin-right 25px
+			margin-right 28px
 
 			font-size 14px
 			&:hover
 				font-weight bold
 
 	.sort-education
+		display flex
+		justify-content space-between
+
 		text-align left
 
 		&:first-child
@@ -1446,7 +1487,7 @@ button:hover.sections-arrow-next:after
 .filter-events
 	display inline-block
 	margin-bottom 10px
-	margin-right 25px
+	margin-right 28px
 	cursor pointer
 
 	&:last-child
@@ -1611,6 +1652,16 @@ button:hover.sections-arrow-next:after
 				color #fff
 
 	.events-items
+
+		.events-item-inner
+			overflow hidden
+
+			.events-item-photo-holder
+				transition transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+
+				&:hover
+					transform scale(1.2)
+
 		.not-ative
 			img
 				-webkit-filter grayscale(100%)
@@ -1740,8 +1791,8 @@ button:hover.sections-arrow-next:after
 			.events-item-inner
 				display inline-block
 				float left
-				width 40%
-				margin-right 2%
+				width 37.5%
+				margin-right 54px
 
 			.events-item-inner-info
 				display inline-block
@@ -2445,12 +2496,12 @@ button:hover.sections-arrow-next:after
 	margin-bottom 80px
 
 	.media-banners
-		width 35%
+		width 40%
 
 		float left
 
 		display inline-block
-		margin-right 100px
+		margin-right 8%
 
 		.media-banner-item
 			display block
@@ -2458,7 +2509,7 @@ button:hover.sections-arrow-next:after
 			margin-bottom 20px
 
 	.media-news
-		width 55%
+		width 50%
 		float left
 		display inline-block
 
@@ -2710,6 +2761,7 @@ button:hover.sections-arrow-next:after
 				span
 					width 100%
 					margin auto
+					margin-left 20px
 
 		.tabs-vertical-content
 			float left
@@ -2759,6 +2811,18 @@ button:hover.sections-arrow-next:after
 					height 108px
 /*** //form entry ***/
 
+/*** ajaxLoader ***/
+
+.ajax-loader
+	opacity 1
+	transform translateY(0)
+
+	transition opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+
+	&.unload
+		transform translateY(50px)
+		opacity 0
+/*** //ajaxLoader ***/
 
 
 /***  //GENERAL STYLES ***/

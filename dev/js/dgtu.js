@@ -75,7 +75,6 @@
 					dots: false,
 					prevArrow: "<button type='button' class='sections-arrow sections-arrow-prev icon-arrow-left-red-before icon-arrow-left-white-after'></button>",
 					nextArrow: "<button type='button' class='sections-arrow sections-arrow-next icon-arrow-right-red-before icon-arrow-right-white-after'></button>",
-					centerMode: true,
 				});
 
 				// sliders news
@@ -277,17 +276,42 @@
 
 			},
 
-			isotope: {
+			ajaxTabs: {
 				init: function() {
-					var $container = $(".isotope-filter");
-					$(".isotope-filter-button").on("click", function() {
-						var $itemFilter = $(this);
-						var selector = $itemFilter.attr("data-filter");
-							$container.isotope({  itemSelector: ".isotope-filter-item", filter: selector });
-							return false;
+					var self = this;
+					$(".ajax-link").on("click", function(e) {
+						var $link = $(this);
+						$(".ajax-link").removeClass("active");
+						$link.addClass("active");
+
+						self.load($link.attr("href"), $($link.data("container")));
+
+						e.preventDefault();
+
 					});
+				},
+
+				load: function(url, $container) {
+					$container.wrapInner($('<div class="ajax-loader"/>'));
+
+					setTimeout(function() {
+						$(".ajax-loader").addClass("unload");
+					}, 50);
+
+					setTimeout(function() {
+						$.ajax({
+							url: url,
+							success: function(html) {
+								$container.empty().append($('<div class="ajax-loader unload"/>').append(html));
+								setTimeout(function() {
+									$(".ajax-loader").removeClass("unload");
+								}, 50);
+							},
+						});
+					}, 350);
 				}
 			}
+
 
 		};
 
@@ -296,8 +320,7 @@
 	DGTU.menu();
 	DGTU.initAjaxLoader();
 	DGTU.slider();
-
-	DGTU.isotope.init();
+	DGTU.ajaxTabs.init();
 	DGTU.dropdown.init();
 
 	DGTU.forms.init();

@@ -12,17 +12,17 @@ block content
             | Список новостей
     div(class="tags")
         div(class="tags-inner")
-            a(href="#", class="tag-item active") #объявление
-            a(href="#", class="tag-item") #олимпиада
-            a(href="#", class="tag-item") #конкурсы
-            a(href="#", class="tag-item") #родителям
-            a(href="#", class="tag-item") #какой-то тег
-            a(href="#", class="tag-item") #конкурсы
-            a(href="#", class="tag-item") #родители
-            a(href="#", class="tag-item") #тег
+            a(href="news_ajax.html", class="tag-item ajax-link active", data-container="#news") #объявление
+            a(href="news_ajax.html", class="tag-item ajax-link", data-container="#news") #олимпиада
+            a(href="news_ajax.html", class="tag-item ajax-link", data-container="#news") #конкурсы
+            a(href="news_ajax.html", class="tag-item ajax-link", data-container="#news") #родителям
+            a(href="news_ajax.html", class="tag-item ajax-link", data-container="#news") #тесты
+            a(href="news_ajax.html", class="tag-item ajax-link", data-container="#news") #развлечения
+            a(href="news_ajax.html", class="tag-item ajax-link", data-container="#news") #для студентов
+            a(href="news_ajax.html", class="tag-item ajax-link", data-container="#news") #мероприятия
 
     div(class="page-inner")
-        div(class="news")
+        div(id="news", class="news")
             div(class="news-list")
                 div(class="news-item")
                     div(class="news-item-heading-block")
@@ -53,6 +53,7 @@ block content
                                 span 30.06.2017
                                 span 14:00
                             a(href="#", class="tag") #объявление
+                            a(href="#", class="tag") #олимпиада
                             div(class="news-item-heading-icons")
                                 div(class="news-item-heading-icon icon-picture-inner")
                                 div(class="news-item-heading-icon icon-video-inner")
@@ -69,7 +70,7 @@ block content
                             div(class="news-item-heading-date")
                                 span 30.06.2017
                                 span 14:00
-                            a(href="#", class="tag") #объявление
+                            a(href="#", class="tag") #олимпиада
                             div(class="news-item-heading-icons")
                                 div(class="news-item-heading-icon icon-video-inner")
                     div(class="news-item-text") Световой квант, взаимодействуя с атомом, отдает ему энергию и переводит на более высокий энергетический уровень, то есть в возбужденное состояние. Фотон при этом исчезает - среда поглощает свет. После того как все атомы среды возбуждаются, поглощение световой энергии прекращается - среда становится прозрачной. Но такое состояние не может длиться долго: фотоны, летящие следом, заставляют атомы возвращаться в исходное состояние, испуская кванты той же частоты. Именно это и происходит, когда через такую среду направляется короткий световой импульс большой мощности соответствующей частоты. Передний фронт импульса перебрасывает атомы на верхний уровень, частично при этом поглощаясь и становясь слабее. Максимум импульса поглощается уже меньше, а задний фронт импульса стимулирует обратный переход с возбужденного уровня на основной. Атом излучает фотон, его энергия возвращается импульсу, который и проходит через среду. При этом форма импульса оказывается соответствующей групповому солитону.
@@ -85,7 +86,7 @@ block content
                             div(class="news-item-heading-date")
                                 span 30.06.2017
                                 span 14:00
-                            a(href="#", class="tag") #объявление
+                            a(href="#", class="tag") #конкурсы
                             div(class="news-item-heading-icons")
                                 div(class="news-item-heading-icon icon-picture-inner")
                                 div(class="news-item-heading-icon icon-video-inner")
@@ -102,7 +103,7 @@ block content
                             div(class="news-item-heading-date")
                                 span 30.06.2017
                                 span 14:00
-                            a(href="#", class="tag") #объявление
+                            a(href="#", class="tag") #развлечения
                             div(class="news-item-heading-icons")
                                 div(class="news-item-heading-icon icon-video-inner")
                     div(class="news-item-text") Световой квант, взаимодействуя с атомом, отсдает ему энергию и переводит на более высокий энергетический уровень, то есть в возбужденное состояние. Фотон при этом исчезает - среда поглощает свет. После того как все атомы среды возбуждаются, поглощение световой энергии прекращается - среда становится прозрачной. Но такое состояние не может длиться долго: фотоны, летящие следом, заставляют атомы возвращаться в исходное состояние, испуская кванты той же частоты. Именно это и происходит, когда через такую среду направляется короткий световой импульс большой мощности соответствующей частоты. Передний фронт импульса перебрасывает атомы на верхний уровень, частично при этом поглощаясь и становясь слабее. Максимум импульса поглощается уже меньше, а задний фронт импульса стимулирует обратный переход с возбужденного уровня на основной. Атом излучает фотон, его энергия возвращается импульсу, который и проходит через среду. При этом форма импульса оказывается соответствующей групповому солитону.
@@ -118,7 +119,7 @@ block content
                             div(class="news-item-heading-date")
                                 span 30.06.2017
                                 span 14:00
-                            a(href="#", class="tag") #объявление
+                            a(href="#", class="tag") #мероприятия
                             div(class="news-item-heading-icons")
                                 div(class="news-item-heading-icon icon-picture-inner")
                                 div(class="news-item-heading-icon icon-video-inner")
