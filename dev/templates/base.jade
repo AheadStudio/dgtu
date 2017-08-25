@@ -53,11 +53,13 @@ html(lang="ru", class="no-js", prefix="og:http://ogp.me/ns#")
 				noCache: true
 			}, {
 				media: "screen",
-				href: "../css/plugins/slick.css",
-				noCache: true
+				href: "../css/plugins/slick.css"
 			}, {
 				media: "screen",
 				href:"https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic-ext"
+			}, {
+				media: "screen",
+				href: "../css/plugins/magnific-popup.min.css",
 			},
 		])
 
@@ -98,18 +100,12 @@ html(lang="ru", class="no-js", prefix="og:http://ogp.me/ns#")
 									a(href="/register", class="user-bar-item link link-red-bottom")
 										Регистрация
 								div(class="header-social")
-									a(href="https://vk.com/", target="_blank", class="header-social-item icon-vk-red-inner")
-										| ВКонтакте
-									a(href="https://vk.com/", target="_blank", class="header-social-item icon-twitter-red-inner")
-										| Twitter
-									a(href="https://vk.com/", target="_blank", class="header-social-item icon-facebook-red-inner")
-										| Facebook
-									a(href="https://vk.com/", target="_blank", class="header-social-item icon-ok-red-inner")
-										| Одноклассники
-									a(href="https://vk.com/", target="_blank", class="header-social-item icon-instagram-red-inner")
-										| Instagram
-									a(href="https://vk.com/", target="_blank", class="header-social-item icon-youtube-red-inner")
-										| YouTube
+									a(href="https://vk.com/", title="ВКонтакте", target="_blank", class="header-social-item icon-vk-red-before icon-vk-black-after")
+									a(href="https://vk.com/", title="Twitter", target="_blank", class="header-social-item icon-twitter-red-before icon-twitter-black-after") 
+									a(href="https://vk.com/", title="Facebook", target="_blank", class="header-social-item icon-facebook-red-before icon-facebook-black-after")
+									a(href="https://vk.com/", title="Одноклассники", target="_blank", class="header-social-item icon-ok-red-before icon-ok-black-after")
+									a(href="https://vk.com/", title="Instagram", target="_blank", class="header-social-item icon-instagram-red-before icon-instagram-black-after")
+									a(href="https://vk.com/", title="YouTube", target="_blank", class="header-social-item icon-youtube-red-before icon-youtube-black-after")
 							div(class="header-col--row")
 								div(class="header-search")
 									form(action="/search.html")
@@ -168,28 +164,34 @@ html(lang="ru", class="no-js", prefix="og:http://ogp.me/ns#")
 						})
 				div(class="header-row header-row--bottom")
 					div(class="sections")
-						a(href="#", class="sections-item", style="background-image: url(../dummy/olympiads.jpg)")
-							div(class="sections-item-text")
-								| Олимпиады
-						a(href="#", class="sections-item", style="background-image: url(../dummy/competition.jpg)")
-							div(class="sections-item-text")
-								| Гранты
-								br
-								| Конкурсы
-						a(href="#", class="sections-item", style="background-image: url(../dummy/test.jpg)")
-							div(class="sections-item-text")
-								| Профориентационное 
-								br
-								| тестирование
-						a(href="#", class="sections-item", style="background-image: url(../dummy/teacher.jpg)")
-							div(class="sections-item-text")
-								| Учителям
-						a(href="#", class="sections-item", style="background-image: url(../dummy/tour.jpg)")
-							div(class="sections-item-text")
-								| ДГТУ-Тур
-						a(href="#", class="sections-item", style="background-image: url(../dummy/open-day.jpg)")
-							div(class="sections-item-text")
-								| Дни открытых дверей
+						div(class="sections-item-container")
+							a(href="#", class="sections-item", style="background-image: url(../dummy/olympiads.jpg)")
+								div(class="sections-item-text")
+									| Олимпиады
+						div(class="sections-item-container")
+							a(href="#", class="sections-item", style="background-image: url(../dummy/competition.jpg)")
+								div(class="sections-item-text")
+									| Гранты
+									br
+									| Конкурсы
+						div(class="sections-item-container")
+							a(href="#", class="sections-item", style="background-image: url(../dummy/test.jpg)")
+								div(class="sections-item-text")
+									| Профориентационное 
+									br
+									| тестирование
+						div(class="sections-item-container")
+							a(href="#", class="sections-item", style="background-image: url(../dummy/teacher.jpg)")
+								div(class="sections-item-text")
+									| Учителям
+						div(class="sections-item-container")
+							a(href="#", class="sections-item", style="background-image: url(../dummy/tour.jpg)")
+								div(class="sections-item-text")
+									| ДГТУ-Тур
+						div(class="sections-item-container")
+							a(href="#", class="sections-item", style="background-image: url(../dummy/open-day.jpg)")
+								div(class="sections-item-text")
+									| Дни открытых дверей
 								
 			main(class="page-content")
 				block content
@@ -296,6 +298,10 @@ html(lang="ru", class="no-js", prefix="og:http://ogp.me/ns#")
 				src: "../js/plugins/jcf.select.js"
 			}, {
 				src: "../js/plugins/slick.min.js"
+			}, {
+				src: "../js/plugins/jquery.magnific-popup.min.js"
+			}, {
+				src: "../js/plugins/sticky-kit.js"
 			}, {
 				src: "../js/" + info.code + ".js"
 			}

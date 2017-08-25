@@ -176,6 +176,8 @@
 							if(!$item.hasClass("active-tabs")) {
 								self.hideAll($tabs);
 								self.show(itemID, $tabs);
+
+								DGTU.scrollElement();
 							}
 							e.preventDefault();
 						}
@@ -272,8 +274,16 @@
 					);
 					self.map.geoObjects.add(placemark1);
 					self.map.geoObjects.add(placemark2);
-				}
 
+					$(".tabs-heading-item").on("click", function(e) {
+						var $item = $(this);
+
+						if ($item.data("panto")) {
+							self.map.panTo($item.data("panto"), {flying: 1});
+						}
+
+					});
+				}
 			},
 
 			ajaxTabs: {
@@ -310,28 +320,79 @@
 						});
 					}, 350);
 				}
-			}
+			},
+
+			scrollElement: function() {
+				var $pageMenuLeft = $(".page-menu");
+
+				$pageMenuLeft.each(function() {
+					menu = $(this);
+
+					menu.trigger("sticky_kit:detach");
+
+					menu.stick_in_parent({
+						container: $(".active-tabs"),
+						offset_top: 50
+					});
+
+				});
+
+				$(".media-banners, .media-news").stick_in_parent({
+					container: $(".media"),
+					offset_top: 50
+				});
+			},
+
+			modalGallery: function() {
+				$(".popup-gallery").magnificPopup({
+					delegate: "a",
+					mainClass: "mfp-gallery",
+					type: "image",
+					removalDelay: 200,
+					tLoading: '',
+					closeOnContentClick: true,
+					gallery: {
+						enabled: true,
+						navigateByImgClick: false,
+						preload: [0, 2],
+						tCounter: "",
+					},
+					zoom: {
+						enabled: true,
+						duration: 500,
+					},
+					midClick: true,
+
+				});
+
+			},
+
 
 
 		};
 
 	})();
+	ymaps.ready(function() {
+		DGTU.yandexMap.init();
+	});
 
 	DGTU.menu();
-	DGTU.initAjaxLoader();
-	DGTU.slider();
-	DGTU.ajaxTabs.init();
 	DGTU.dropdown.init();
+
+	DGTU.initAjaxLoader();
+	DGTU.ajaxTabs.init();
+
+	DGTU.slider();
 
 	DGTU.forms.init();
 
 	DGTU.tabs.init();
+	DGTU.modalGallery();
+
+	DGTU.scrollElement();
 
 	DGTU.slideToggle.init();
 
-	ymaps.ready(function() {
-		DGTU.yandexMap.init();
-	});
 
 
 })(jQuery);
