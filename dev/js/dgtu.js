@@ -372,6 +372,8 @@
 		};
 
 	})();
+	DGTU.slider();
+
 	ymaps.ready(function() {
 		DGTU.yandexMap.init();
 	});
@@ -382,7 +384,6 @@
 	DGTU.initAjaxLoader();
 	DGTU.ajaxTabs.init();
 
-	DGTU.slider();
 
 	DGTU.forms.init();
 
