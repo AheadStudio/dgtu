@@ -30,7 +30,6 @@ block content
                 label(class="filter-events")
                     input(type="checkbox", class="form-item--checkbox")
                     span(class="form-item-label--text") CDIO
-            div(class="sort-events--type sort-education")
                 label(class="filter-events filter-events--more", data-slide-more="form-education")
                     input(type="checkbox", class="form-item--checkbox") 
                     span(class="form-item-label--text") форма обучения
@@ -46,8 +45,27 @@ block content
                 label(class="filter-events filter-events--more", data-slide-more="industry")
                     input(type="checkbox", class="form-item--checkbox")
                     span(class="form-item-label--text") по отраслям
-                    
-                    
+                label(class="filter-events filter-events--more", data-slide-more="training_period")
+                    input(type="checkbox", class="form-item--checkbox")
+                    span(class="form-item-label--text") Срок обучения
+    
+    div(class="sort-events-holder sort-events--more", id="training_period")
+        div(class="sort-events-container")
+            div(class="page-inner")
+                div(class="sort-events--type sort-education--more")
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox") 
+                        span(class="form-item-label--text") 4 года
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox")
+                        span(class="form-item-label--text") 4.5 год
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox")
+                        span(class="form-item-label--text") 5 лет
+                    label(class="filter-events")
+                        input(type="checkbox", class="form-item--checkbox")
+                        span(class="form-item-label--text") 5.5 лет
+        
     div(class="sort-events-holder sort-events--more", id="industry")
         div(class="sort-events-container")
             div(class="page-inner")

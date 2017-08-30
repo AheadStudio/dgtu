@@ -104,7 +104,7 @@
 				$(".slider-bottom-service").slick({
 					infinite: true,
 					slidesToShow: 2,
-					slidesToScroll: 1,
+					slidesToScroll: 3,
 					dots: false,
 					prevArrow: "<button type='button' class='slider-arrow slider-arrow--prev'></button>",
 					nextArrow: "<button type='button' class='slider-arrow slider-arrow--next'></button>",
@@ -161,6 +161,43 @@
 							spanColor: $rd.data("spancolor") ? $rd.data("spancolor") : ""
 						});
 					});
+
+
+					$.validator.setDefaults({
+						errorClass: "form-item--error",
+						errorElement: "span"
+					});
+					$.validator.addMethod("mobileRU", function(phone_number, element) {
+						phone_number = phone_number.replace(/\(|\)|\s+|-/g, "");
+						return this.optional(element) || phone_number.length > 5 && phone_number.match(/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{6,10}$/);
+					}, "Error");
+					$(".form", $container).each(function() {
+						var $form = $(this),
+							formParams = {
+								rules: {
+
+								},
+								messages: {
+								}
+							},
+							$formFields = $form.find("[data-error]");
+						$formFields.each(function() {
+							var $field = $(this),
+								fieldPattern = $field.data("pattern"),
+								fieldError = $field.data("error");
+							if(fieldError) {
+								formParams.messages[$field.attr("name")] = $field.data("error");
+							} else {
+								formParams.messages[$field.attr("name")] = "Ошибка заполнения";
+							}
+							if(fieldPattern) {
+								formParams.rules[$field.attr("name")] = {};
+								formParams.rules[$field.attr("name")][fieldPattern] = true;
+							}
+						});
+						
+						$form.validate(formParams);
+					});
 				}
 			},
 
@@ -214,14 +251,26 @@
 				$sel.body.on("click", ".btn-event-load--more", function(event) {
 					var $linkAddress = $(this),
 						href = $linkAddress.attr("href"),
-						$container = $($linkAddress.data("container"));
+						$container = $($linkAddress.data("container")),
+						$pos = $linkAddress.data("add");
+
+						console.log($pos);
 
 						(function(href, $container) {
 							$.ajax({
 								url: href,
 								success: function(data) {
 									var $data = $(data).addClass("load-events-item");
-										$container.append($data);
+										if ($pos == "up") {
+											$container.prepend($data);
+											console.log("1");
+										} else {
+											$container.append($data);
+											console.log("2");
+										}
+									setTimeout(function() {
+										$container.find(".load-events-item").removeClass("load-events-item");
+									}, 50);
 								}
 							})
 						})(href, $container);

@@ -94,15 +94,20 @@ block content
                     form(class="form")
                         div(class="form-row")
                             div(class="form-item-holder form-item-holder--w4")
-                                select(class="form-item form-item--select")
-                                    option Участие
-                                    option Принятие
-                                    option Отторжение
-                                input(type="text", class="form-item form-item--text", name="mobile", placeholder="Телефон", required)
+                                div(class="form-item-holder-container")
+                                    select(class="form-item form-item--select")
+                                        option Участие
+                                        option Принятие
+                                        option Отторжение
+                                div(class="form-item-holder-container")
+                                    input(type="text", class="form-item form-item--text", name="mobile", placeholder="Телефон", required, data-error="Введите телефон", data-pattern="mobileRu")
                             div(class="form-item-holder form-item-holder--w4")
-                                input(type="text", class="form-item form-item--text", name="lastname", placeholder="Имя", required)
-                                input(type="email", class="form-item form-item--text", name="email", placeholder="E-mail", required)
+                                div(class="form-item-holder-container")
+                                    input(type="text", class="form-item form-item--text", name="lastname", placeholder="Имя", required, data-error="Введите имя")
+                                div(class="form-item-holder-container")
+                                    input(type="email", class="form-item form-item--text", name="email", placeholder="E-mail", required, data-error="Введите Email")
                             div(class="form-item-holder form-item-holder--w4")
-                                textarea(rows="2", name="text", class="form-item form-item--textarea", placeholder="Ваш вопрос")
-                            button(type="submit", name="send-form" class="form-item form-item--submit")Отправить
+                                div(class="form-item-holder-container")
+                                    textarea(rows="2", name="text", class="form-item form-item--textarea", placeholder="Ваш вопрос")
+                            button(type="submit", name="send-form" class="form-item form-item--submit") Отправить
                 

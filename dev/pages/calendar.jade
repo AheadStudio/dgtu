@@ -13,29 +13,61 @@ block content
     div(class="sort-events-holder")
         div(class="page-inner")
             div(class="sort-events--years")
-                a(href="#", class="link link-black link-black-bottom") 2016
-                a(href="#", class="link link-black link-black-bottom") 2017
-                a(href="#", class="link link-black link-black-bottom") 2018
-                a(href="#", class="link link-black link-black-bottom") 2019
+                label(class="filter-events")
+                    input(type="radio", name="event-year", class="form-item--radio", checked) 
+                    span(class="form-item-label--text") 2016
+                label(class="filter-events")
+                    input(type="radio", name="event-year", class="form-item--radio")
+                    span(class="form-item-label--text") 2017
+                label(class="filter-events")
+                    input(type="radio", name="event-year", class="form-item--radio")
+                    span(class="form-item-label--text") 2018
+                label(class="filter-events")
+                    input(type="radio", name="event-year", class="form-item--radio")
+                    span(class="form-item-label--text") 2019
             div(class="sort-events--month")
-                a(href="#", class="link link-black link-black-bottom") Январь
-                a(href="#", class="link link-black link-black-bottom") Февраль
-                a(href="#", class="link link-black link-black-bottom") Март
-                a(href="#", class="link link-black link-black-bottom") Апрель
-                a(href="#", class="link link-black link-black-bottom") Май
-                a(href="#", class="link link-black link-black-bottom") Июнь
-                a(href="#", class="link link-black link-black-bottom") Июль
-                a(href="#", class="link link-black link-black-bottom") Август
-                a(href="#", class="link link-not-active") Сентябрь
-                a(href="#", class="link link-not-active") Октябрь
-                a(href="#", class="link link-black link-black-bottom") Ноябрь
-                a(href="#", class="link link-black link-black-bottom") Декабрь
+                label(class="filter-events")
+                    input(type="radio", name="event-month", class="form-item--radio", checked) 
+                    span(class="form-item-label--text") Январь
+                label(class="filter-events")
+                    input(type="radio", name="event-month", class="form-item--radio")
+                    span(class="form-item-label--text") Февраль
+                label(class="filter-events")
+                    input(type="radio", name="event-month", class="form-item--radio")
+                    span(class="form-item-label--text") Март
+                label(class="filter-events")
+                    input(type="radio", name="event-month", class="form-item--radio")
+                    span(class="form-item-label--text") Апрель
+                label(class="filter-events")
+                    input(type="radio", name="event-month", class="form-item--radio") 
+                    span(class="form-item-label--text") Май
+                label(class="filter-events")
+                    input(type="radio", name="event-month", class="form-item--radio")
+                    span(class="form-item-label--text") Июнь
+                label(class="filter-events")
+                    input(type="radio", name="event-month", class="form-item--radio")
+                    span(class="form-item-label--text") Июль
+                label(class="filter-events")
+                    input(type="radio", name="event-month", class="form-item--radio")
+                    span(class="form-item-label--text ") Август
+                label(class="filter-events")
+                    input(type="radio", name="event-month", class="form-item--radio") 
+                    span(class="form-item-label--text") Сентябрь
+                label(class="filter-events")
+                    input(type="radio", name="event-month", class="form-item--radio")
+                    span(class="form-item-label--text") Октябрь
+                label(class="filter-events")
+                    input(type="radio", name="event-month", class="form-item--radio")
+                    span(class="form-item-label--text") Ноябрь
+                label(class="filter-events")
+                    input(type="radio", name="event-month", class="form-item--radio")
+                    span(class="form-item-label--text") Декабрь
             div(class="sort-events--type")
                 label(class="filter-events")
-                    input(type="radio", name="event-item", class="form-item--radio", data-filter=".events") 
+                    input(type="radio", name="event-item", class="form-item--radio", checked) 
                     span(class="form-item-label--text") Мероприятия
                 label(class="filter-events")
-                    input(type="radio", name="event-item", class="form-item--radio", data-filter=".news")
+                    input(type="radio", name="event-item", class="form-item--radio")
                     span(class="form-item-label--text") Новости
                 label(class="filter-events")
                     input(type="radio", name="event-item", class="form-item--radio")
@@ -53,77 +85,63 @@ block content
         div(class="events")
             div(class="events-items")
                 div(class="button-events")
-                    button(type="button", class="btn btn-event-load") Показать прошедшие мероприятия
-                div(class="events-item active")
-                    a(href="#", class="events-item-inner")
-                        div(class="events-item-photo-holder")
-                            img(src="../dummy/olympiads-mathematics.jpg", class="events-item-photo")
-                    div(class="events-item-inner-info")
-                        a(href="#", class="link link-black-bottom events-item-inner-title") Заголовок объявления пишу очень длинный
-                        div(class="events-item-inner-date")
-                            span 30.06.2017
-                            span 14:00
-                        div(class="events-item-inner-location") ул. Улица. Главный холл ДГТУ
-                        div(class="events-item-inner-text") Потенциальная яма – ограниченная область пространства с пониженной потенциальной энергией частицы. Потенциальная яма обычно отвечает короткодействующим силам притяжения. В области действия этих сил потенциал отрицателен, вне – нулевой.                
-                    a(href="#", class="tag") #объявление
-                    a(href="#", class="events-item-inner-more")
-                        span(class="item--more")
-                div(class="events-item")
-                    a(href="#", class="events-item-inner")
-                        div(class="events-item-photo-holder")
-                            img(src="../dummy/olympiads-mathematics.jpg", class="events-item-photo")
-                    div(class="events-item-inner-info")
-                        a(href="#", class="link link-black-bottom events-item-inner-title") Заголовок объявления пишу очень длинный
-                        div(class="events-item-inner-date")
-                            span 30.06.2017
-                            span 14:00
-                            span -
-                            span 31.06.2017
-                        div(class="events-item-inner-location") ул. Улица. Главный холл ДГТУ
-                    a(href="#", class="tag") #объявление
-                    a(href="#", class="events-item-inner-more")
-                        span(class="item--more")
-                div(class="events-item")
-                    a(href="#", class="events-item-inner")
-                        div(class="events-item-photo-holder")
-                            img(src="../dummy/olympiads-mathematics.jpg", class="events-item-photo")
-                    div(class="events-item-inner-info")
-                        a(href="#", class="link link-black-bottom events-item-inner-title") Заголовок объявления пишу очень длинный
-                        div(class="events-item-inner-date")
-                            span 30.06.2017
-                            span 14:00
-                            span -
-                            span 31.06.2017
-                        div(class="events-item-inner-location") ул. Улица. Главный холл ДГТУ
-                    a(href="#", class="tag") #объявление
-                    a(href="#", class="events-item-inner-more")
-                        span(class="item--more")
-                div(class="events-item not-ative")
-                    a(href="#", class="events-item-inner")
-                        div(class="events-item-photo-holder")
-                            img(src="../dummy/olympiads-mathematics.jpg", class="events-item-photo")
-                    div(class="events-item-inner-info")
-                        a(href="#", class="link link-black-bottom events-item-inner-title") Заголовок объявления пишу очень длинный
-                        div(class="events-item-inner-date")
-                            span 30.06.2017
-                            span 14:00
-                            span -
-                            span 31.06.2017
-                        div(class="events-item-inner-location") ул. Улица. Главный холл ДГТУ
-                    a(href="#", class="tag") #объявление
-                    a(href="#", class="events-item-inner-more")
-                        span(class="item--more")
-                div(class="events-item active")
-                    a(href="#", class="events-item-inner")
-                        div(class="events-item-photo-holder")
-                            img(src="../dummy/olympiads-mathematics.jpg", class="events-item-photo")
-                    div(class="events-item-inner-info")
-                        a(href="#", class="link link-black-bottom events-item-inner-title") Заголовок объявления пишу очень длинный
-                        div(class="events-item-inner-date")
-                            span 30.06.2017
-                            span 14:00
-                        div(class="events-item-inner-location") ул. Улица. Главный холл ДГТУ
-                        div(class="events-item-inner-text") Потенциальная яма – ограниченная область пространства с пониженной потенциальной энергией частицы. Потенциальная яма обычно отвечает короткодействующим силам притяжения. В области действия этих сил потенциал отрицателен, вне – нулевой.                
-                    a(href="#", class="tag") #объявление
-                    a(href="#", class="events-item-inner-more")
-                        span(class="item--more")
+                    a(href="calendar-events-load.html", data-container="#calendar-events-items-list", data-add="up", class="btn btn-event-load btn-event-load--more") Показать прошедшие мероприятия
+                div(class="events-items-continer", id="calendar-events-items-list")
+                    div(class="events-item active")
+                        a(href="#", class="events-item-inner")
+                            div(class="events-item-photo-holder")
+                                img(src="../dummy/olympiads-mathematics.jpg", class="events-item-photo")
+                        div(class="events-item-inner-info")
+                            a(href="#", class="link link-black-bottom events-item-inner-title") Заголовок объявления пишу очень длинный
+                            div(class="events-item-inner-date")
+                                span 30.06.2017
+                                span 14:00
+                            div(class="events-item-inner-location") ул. Улица. Главный холл ДГТУ
+                            div(class="events-item-inner-text") Потенциальная яма – ограниченная область пространства с пониженной потенциальной энергией частицы. Потенциальная яма обычно отвечает короткодействующим силам притяжения. В области действия этих сил потенциал отрицателен, вне – нулевой.                
+                        a(href="#", class="tag") #объявление
+                        a(href="#", class="events-item-inner-more")
+                            span(class="item--more")
+                    div(class="events-item")
+                        a(href="#", class="events-item-inner")
+                            div(class="events-item-photo-holder")
+                                img(src="../dummy/olympiads-mathematics.jpg", class="events-item-photo")
+                        div(class="events-item-inner-info")
+                            a(href="#", class="link link-black-bottom events-item-inner-title") Заголовок объявления пишу очень длинный
+                            div(class="events-item-inner-date")
+                                span 30.06.2017
+                                span 14:00
+                                span -
+                                span 31.06.2017
+                            div(class="events-item-inner-location") ул. Улица. Главный холл ДГТУ
+                        a(href="#", class="tag") #объявление
+                        a(href="#", class="events-item-inner-more")
+                            span(class="item--more")
+                    div(class="events-item")
+                        a(href="#", class="events-item-inner")
+                            div(class="events-item-photo-holder")
+                                img(src="../dummy/olympiads-mathematics.jpg", class="events-item-photo")
+                        div(class="events-item-inner-info")
+                            a(href="#", class="link link-black-bottom events-item-inner-title") Заголовок объявления пишу очень длинный
+                            div(class="events-item-inner-date")
+                                span 30.06.2017
+                                span 14:00
+                                span -
+                                span 31.06.2017
+                            div(class="events-item-inner-location") ул. Улица. Главный холл ДГТУ
+                        a(href="#", class="tag") #объявление
+                        a(href="#", class="events-item-inner-more")
+                            span(class="item--more")
+                    div(class="events-item active")
+                        a(href="#", class="events-item-inner")
+                            div(class="events-item-photo-holder")
+                                img(src="../dummy/olympiads-mathematics.jpg", class="events-item-photo")
+                        div(class="events-item-inner-info")
+                            a(href="#", class="link link-black-bottom events-item-inner-title") Заголовок объявления пишу очень длинный
+                            div(class="events-item-inner-date")
+                                span 30.06.2017
+                                span 14:00
+                            div(class="events-item-inner-location") ул. Улица. Главный холл ДГТУ
+                            div(class="events-item-inner-text") Потенциальная яма – ограниченная область пространства с пониженной потенциальной энергией частицы. Потенциальная яма обычно отвечает короткодействующим силам притяжения. В области действия этих сил потенциал отрицателен, вне – нулевой.                
+                        a(href="#", class="tag") #объявление
+                        a(href="#", class="events-item-inner-more")
+                            span(class="item--more")

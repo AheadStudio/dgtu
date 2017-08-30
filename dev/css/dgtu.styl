@@ -480,6 +480,11 @@ button:hover.sections-arrow-next:after
 
 /*** COMMON STYLES ***/
 
+.found-text
+	background #f8d11c
+
+
+
 /*** link  ***/
 
 
@@ -607,7 +612,7 @@ button:hover.sections-arrow-next:after
 	color #fff
 	cursor pointer
 
-	transition all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+	transition color,background 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
 
 	&:hover
 		color color-red
@@ -772,7 +777,8 @@ button:hover.sections-arrow-next:after
 
 .form
 	&-row
-		clearfix()
+		overflow hidden
+		margin-bottom 10px
 		display block
 		width 100%
 
@@ -811,6 +817,7 @@ button:hover.sections-arrow-next:after
 
 		.jcf-select-text
 			font-size 16px
+			margin-left 10px
 
 		.jcf-select-opener
 			position absolute
@@ -831,7 +838,7 @@ button:hover.sections-arrow-next:after
 
 	.form-item-holder
 		width 100%
-		margin-bottom 10px
+		margin-bottom 15px
 
 		&--w2
 			width 49%
@@ -863,7 +870,7 @@ button:hover.sections-arrow-next:after
 				margin-right 0
 		.form-item
 			width 100%
-			padding 15px 10px
+			padding 15px 20px
 			box-sizing border-box
 
 			border 1px solid #9e9e9e
@@ -1515,12 +1522,20 @@ button:hover.sections-arrow-next:after
 
 		text-transform uppercase
 		text-align center
-		a
-			margin-right 28px
 
-			font-size 14px
-			&:hover
-				font-weight bold
+		.filter-events
+			.form-item-label--text
+				&:hover
+					font-weight bold
+
+		.filter-events.jcf-label-active
+			.form-item-label--text
+				border-bottom 1px solid #000
+
+	.sort-events--type
+		&.sort-events--type--search
+			.filter-events
+				margin-right 40px
 
 	.sort-education
 		display flex
@@ -1528,8 +1543,12 @@ button:hover.sections-arrow-next:after
 
 		text-align left
 
-		&:first-child
-			margin-bottom: 20px
+		flex-wrap wrap
+
+
+		.filter-events
+			margin-right 20px
+			margin-bottom 20px
 
 	.sort-education--more
 		display inline-block
@@ -1570,14 +1589,14 @@ button:hover.sections-arrow-next:after
 .filter-events
 	display inline-block
 	margin-bottom 10px
-	margin-right 28px
+	margin-right 15px
 	cursor pointer
 
 	&:last-child
 		margin-right 0px
 
 	.form-item-label--text
-		padding-left 10px
+		margin-left 10px
 		font-size 14px
 		color #212121
 
@@ -1655,6 +1674,7 @@ button:hover.sections-arrow-next:after
 
 .filter-events.jcf-label-active
 	font-weight bold
+
 	.jcf-radio.jcf-checked
 		span
 			background color-red
@@ -1702,6 +1722,24 @@ button:hover.sections-arrow-next:after
 
 /*** //load more ***/
 
+.events-container--more
+	transform translateY(0px)
+
+	transition opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+
+	&.load-events-item
+		opacity 0
+		transform translateY(50px)
+
+.events-items-continer--more
+	transform translateY(0px)
+
+	transition opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+
+	&.load-events-item
+		opacity 0
+		transform translateY(50px)
+
 .events
 	margin-bottom 80px
 
@@ -1747,20 +1785,20 @@ button:hover.sections-arrow-next:after
 
 		.not-ative
 			img
-				-webkit-filter grayscale(100%)
-				-moz-filter grayscale(100%)
-				-ms-filter grayscale(100%)
-				-o-filter grayscale(100%)
 				filter gray
 				filter grayscale(100%)
+
 			.events-item-inner-info
 				color gray
+
 				.events-item-inner-title
 					color gray
 
 			.tag
 				background gray
-		.events-item:not(.active)
+				color #fff
+
+		.events-item
 			clearfix()
 			position relative
 			width 80%
@@ -1775,12 +1813,15 @@ button:hover.sections-arrow-next:after
 			padding 20px
 
 			border 1px solid #b2b2b2
+
 			.documents
 				display block
 				margin-top 30px
+
 				a
 					.icon-download-file-inner
 						margin-right 18px
+
 					&:hover
 						span:not(.icon-not-transition)
 							border-bottom 1px solid transparent
@@ -1850,6 +1891,13 @@ button:hover.sections-arrow-next:after
 					line-height 1.5
 
 
+	&:not(.events--set)
+		.events-item
+			.events-item-inner-info
+				.events-item-inner-text
+					display none
+
+
 			.tag
 				position absolute
 				bottom 16px
@@ -1861,12 +1909,14 @@ button:hover.sections-arrow-next:after
 				bottom 16px
 				right 16px
 
-		.events-item.active
+	&:not(.events--set)
+		.events-item:hover
 			clearfix()
 			position relative
 
 			padding 15px
 			margin-bottom 30px
+			width 100%
 
 
 			border 1px solid color-red
@@ -1904,6 +1954,7 @@ button:hover.sections-arrow-next:after
 					font-size 16px
 
 				.events-item-inner-text
+					display block
 					margin-top 20px
 					line-height 1.5
 
@@ -1913,7 +1964,9 @@ button:hover.sections-arrow-next:after
 				right 542px
 
 				padding 2px 8px
+
 			.events-item-inner-more
+
 				position absolute
 				bottom 16px
 				right 16px
@@ -2887,6 +2940,7 @@ button:hover.sections-arrow-next:after
 					margin-bottom 15px
 
 			.form-item.form-item--textarea
+				font-family 'Open Sans', sans-serif
 				background #fff
 
 			.jcf-select-form-item
@@ -2894,7 +2948,13 @@ button:hover.sections-arrow-next:after
 
 			&--w4
 				.form-item.form-item--textarea
+					font-family 'Open Sans', sans-serif
+					background #fff
+
 					height 108px
+.form-item--textarea
+	font-family 'Open Sans', sans-serif
+	background #fff
 /*** //form entry ***/
 
 /*** ajaxLoader ***/
@@ -2909,6 +2969,33 @@ button:hover.sections-arrow-next:after
 		transform translateY(50px)
 		opacity 0
 /*** //ajaxLoader ***/
+
+/*** validation form ***/
+
+.form
+	.form-item-holder-container
+		position relative
+
+		.form-item
+			&.form-item--error
+				color #fff !important
+				background #e96708 !important
+				border-color #e96708 !important
+
+				&::-webkit-input-placeholder
+					visibility hidden
+
+		span.form-item--error
+			position absolute
+
+			left 20px
+			top 32px
+
+			margin-top 15px
+			color #e96708
+
+			font-size 14px
+/*** //validation form ***/
 
 
 /***  //GENERAL STYLES ***/
